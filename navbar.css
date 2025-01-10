@@ -81,14 +81,70 @@ font-size: 50px;
 width: 500px;
 object-fit: cover;
 padding-top: 150px;
+}
+.slider-1-img1{
+    animation: zoom-out 1s ease-in-out;
+}
+@keyframes zoom-out{
+from{
+    transform: scale(1.5);
+    opacity: 0;
+}
+to{
+    transform: scale(1);
+    opacity: 1;
+}
+}
+.slider-2-img2{
+    width: 400px;
+    object-fit: contain;
+height: 200px;
 
 }
 .slider-2-img2{
-    width: 600px;
-    object-fit: contain;
-
+    animation: zoom-in 1s ease-in-out;
+}
+@keyframes zoom-in{
+from{
+    transform: scale(0.5);
+    opacity: 0;
+}
+to{
+    transform: scale(1);
+    opacity: 1;
+}
 
 }
+.text-animate{
+    
+    animation: zoom-in 1s ease-in-out;
+}
+
+.btn-animation{
+    transform: translateY(-50px);
+    opacity: 0;
+animation: fall 1s ease-in-out 1s forwards;
+
+}
+
+@keyframes fall{
+    from{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.btn-animation{
+    border: none;
+    border-radius: 1rem;
+    padding: 5px 10px;
+    background-color: #e20a16;
+    color: white;
+}
+
 
 
 
