@@ -79,12 +79,19 @@ font-size: 50px;
 }
 .slider-1-img1{
 width: 500px;
+height: auto;
 object-fit: cover;
 padding-top: 150px;
+animation: zoom-out 1s ease-in-out;
 }
-.slider-1-img1{
-    animation: zoom-out 1s ease-in-out;
+
+@media (max-width: 768px) {
+    .slider-1-img1, .slider-2-img2 {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
+
 @keyframes zoom-out{
 from{
     transform: scale(1.5);
