@@ -1,0 +1,149 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.black{
+    background-color: #222222;
+    height: 30px;
+}
+
+/* search-container and logo*/
+
+/* sec2 */
+.logo-placeholder{
+    height: 50px;
+    width: auto;
+}
+/* .search-container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+} */
+.form-control{
+    border-radius: 0;
+    outline: none;
+}
+
+.form-control:focus{
+    box-shadow: none;
+    background-color: #E3E3E7;
+    transition: 0.2s ease-in-out; 
+}
+
+/* section3 */
+.navlinks{
+    font-family: "popins", sans-serif;
+    font-size: 1.4rem;
+    padding:10px ;
+
+}
+.nav-ul li{
+padding: 10px 0 10px;
+margin: 0px 10px 0px 10px ;
+}
+.navlinks:hover{
+    background-color:#ff3300;
+    transition: 0.2s ease-in-out;
+}
+.active{
+    background-color:#ff3300
+    /* transition: 0.2s ease-in-out; */
+}
+.nav-ul{
+    list-style-type: none;
+    /* display: flex; */
+}
+
+.hamburger-btn{
+    background-color: white;
+    border: none;
+}
+.hamburger-menu{
+font-size: 50px;
+}
+
+/* body */
+/* section4 */
+.slider1-bg-img{
+    background: url('./assets/slider1_home_filter1_bg_img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   padding: 0;
+   margin: 0;
+
+}
+.slider-1-img1{
+width: 500px;
+object-fit: cover;
+padding-top: 150px;
+
+}
+.slider-2-img2{
+    width: 600px;
+    object-fit: contain;
+
+
+}
+
+
+
+/* footer */
+
+
+footer{
+
+    background-color: #101015;
+    font-family: "popins", sans-serif;
+}
+.section1{
+    font-family: "popins", sans-serif;
+    
+}
+
+h4{
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.footer-box{
+    /* height: 25vh; */
+    padding: 100px 0px;
+    border-bottom: 1px solid #bababa;
+}
+
+ul>li>a{
+    text-decoration: none;
+    color: #bababa
+}
+ul>li>a:hover {
+    text-decoration: underline;
+    color: red;
+}
+.office-aside >*{
+color: #bababa;
+}
+.office-aside p{
+    margin: 0;
+}
+
+.contact-aside >*{
+    color: #bababa;
+    padding: 0;
+    margin: 0;
+}
+
+/* section2 */
+
+.section2{
+    color: #bababa;
+}
+.section2 >*{
+font-weight: 500;
+word-spacing: 2px;
+} 
