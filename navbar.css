@@ -111,10 +111,18 @@ object-fit: cover;
 padding-top: 150px;
 animation: zoom-out 1s ease-in-out;
 }
-
+@media (max-width: 576px) {
+    .slider-1-img2 {
+        width: 100%;
+        height: auto;
+        /* padding-top: 50px; */
+    }
+}
 @media (max-width: 768px) {
-    .slider-1-img1, .slider-2-img2 {
+    .slider-1-img1 {
         width: 80%;
+        /* padding-top: 0px; */
+        
         margin: 0 auto;
     }
 }
@@ -237,6 +245,14 @@ animation: fall 1s ease-in-out 1s forwards;
     100% {
         background-position: 0 0;
     }
+}
+
+/* from slider1 zoom-in */
+.slider2-img3{
+    animation: zoom-in 1s ease-in-out;
+}
+.slider2-img1{
+    animation:zoom-out 1s ease-in-out;
 }
 
 /* footer */
