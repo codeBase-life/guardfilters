@@ -15,6 +15,7 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     font-family: "popins", sans-serif;
+    box-sizing: border-box;
     
 }
 
@@ -307,6 +308,43 @@ animation: fall 1s ease-in-out 1s forwards;
 .slide-mover > a:active {
     background-color: #ff0000; 
 }
+
+
+/* section5 */
+.filters-family-icons{
+    padding: 10rem 0 8rem 0;
+}
+
+.filter-icon {
+    background-color: #F9F9F9;
+    border-radius: 20px;
+    padding: 50px 60px;
+    position: relative; /* Required for positioning the pseudo-element */
+}
+
+.filter-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    border: 2px solid transparent; /* Initial transparent border */
+    transition: border-color 0.3s; /* Smooth transition */
+    pointer-events: none; /* Ensure the pseudo-element doesn't interfere with hover */
+}
+
+.filter-icon:hover::before {
+    border-color: red; /* Change border color on hover */
+    
+}
+.filter-icon-heading{
+    font-size: 20px;
+    font-weight: 600;
+    color: #222222;
+}
+
 /* footer */
 
 
