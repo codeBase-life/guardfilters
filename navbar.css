@@ -255,6 +255,56 @@ animation: fall 1s ease-in-out 1s forwards;
     animation:zoom-out 1s ease-in-out;
 }
 
+
+
+/* slider3 */
+
+/* from slider2 */
+.slider3_bg_img{
+    background: url('./assets/slider2_home_filter2_bg_img.jpg');
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    animation: slide 90s  linear infinite;
+}
+
+.slide-mover{
+    display: flex;
+    column-gap: 1rem;
+    justify-content: center;
+    bottom: 1.25rem;
+    left: 50%;
+    
+    z-index: 1;
+}
+
+
+.slider-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.slider-wrapper {
+    -ms-overflow-style: none;
+    
+    scrollbar-width: none;
+    
+}
+.slide-mover >a{
+    height: 10px;
+    width: 10px;
+        border-radius: 50%;
+       
+        opacity: 0.75;
+        border: 1px solid #160e0e;
+        
+}
+.slide-mover > a:hover {
+    background-color: #ff0000; /* Change this to your desired color */
+}
 /* footer */
 
 
