@@ -14,8 +14,10 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
     padding: 0;
+    font-family: "popins", sans-serif;
     
 }
+
 
 
 
@@ -302,8 +304,8 @@ animation: fall 1s ease-in-out 1s forwards;
         border: 1px solid #160e0e;
         
 }
-.slide-mover > a:hover {
-    background-color: #ff0000; /* Change this to your desired color */
+.slide-mover > a:active {
+    background-color: #ff0000; 
 }
 /* footer */
 
