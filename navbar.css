@@ -1,8 +1,22 @@
-body{
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
 }
+
 
 
 
@@ -68,6 +82,19 @@ font-size: 50px;
 
 /* body */
 /* section4 */
+
+.slider-wrapper{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    /* aspect-ratio: 16/3; */
+}
+.slider{
+    flex: 1 0 100%;
+        scroll-snap-align: start;
+}
+
 .slider1-bg-img{
     background: url('./assets/slider1_home_filter1_bg_img.png');
     background-size: cover;
@@ -102,13 +129,14 @@ to{
     opacity: 1;
 }
 }
-.slider-2-img2{
+.slider-1-img2{
     width: 400px;
     object-fit: contain;
-height: 200px;
+/* height: 200px; */
+margin-top: 100px;
 
 }
-.slider-2-img2{
+.slider-1-img2{
     animation: zoom-in 1s ease-in-out;
 }
 @keyframes zoom-in{
@@ -123,7 +151,8 @@ to{
 
 }
 .text-animate{
-    
+    margin-bottom: 5px;
+    width: inherit;
     animation: zoom-in 1s ease-in-out;
 }
 
@@ -152,8 +181,63 @@ animation: fall 1s ease-in-out 1s forwards;
     color: white;
 }
 
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .btn-animation {
+        padding: 5px 10px;
+        font-size: 0.875rem; /* Smaller font size */
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .btn-animation {
+        padding: 10px 20px;
+        font-size: 1rem; /* Base font size */
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    .btn-animation {
+        padding: 12px 24px;
+        font-size: 1.125rem; /* Larger font size */
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    .btn-animation {
+        padding: 5px 10px;
+        font-size: 1rem; /* Even larger font size */
+    }
+}
 
 
+
+/* slider2 */
+
+.slider2_bg_img{
+    background: url('./assets/slider2_home_filter2_bg_img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    animation: slide 90s  linear infinite;
+
+}
+@keyframes slide {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
 
 /* footer */
 
@@ -210,3 +294,6 @@ color: #bababa;
 font-weight: 500;
 word-spacing: 2px;
 } 
+
+
+
