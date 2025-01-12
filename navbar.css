@@ -312,7 +312,8 @@ animation: fall 1s ease-in-out 1s forwards;
 
 /* section5 */
 .filters-family-icons{
-    padding: 10rem 0 8rem 0;
+    padding: 10rem 0 0 0;
+    
 }
 
 .filter-icon {
@@ -338,6 +339,16 @@ animation: fall 1s ease-in-out 1s forwards;
 .filter-icon:hover::before {
     border-color: red; /* Change border color on hover */
     
+}
+
+@media(max-width:768px){
+.filter-icon{
+    padding: 30px 100px;
+    margin: 0 auto;
+}
+.view-all{
+    padding: 0 20px;
+}
 }
 .filter-icon-heading{
     font-size: 20px;
