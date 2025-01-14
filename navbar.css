@@ -385,35 +385,6 @@ animation: fall 1s ease-in-out 1s forwards;
     padding: 10px 20px;
     border-radius: 5px;
 }
-.products-carousel{
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-
-}
-.products-carousel::-webkit-scrollbar {
-    display: none;
-}
-.products-carousel{
-    -ms-overflow-style: none;
-
-        scrollbar-width: none;
-    
-}
-.carousel1{
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-}
-.carousel2{
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-}
-@media(max-width:1290px){
-    .display-xl{
-        display: none;
-    }
-}
 
 .product-container{
     position: relative;
