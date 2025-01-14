@@ -392,6 +392,15 @@ animation: fall 1s ease-in-out 1s forwards;
     scroll-behavior: smooth;
 
 }
+.products-carousel::-webkit-scrollbar {
+    display: none;
+}
+.products-carousel{
+    -ms-overflow-style: none;
+
+        scrollbar-width: none;
+    
+}
 .carousel1{
     flex: 1 0 100%;
     scroll-snap-align: start;
@@ -404,6 +413,56 @@ animation: fall 1s ease-in-out 1s forwards;
     .display-xl{
         display: none;
     }
+}
+
+.product-container{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.product-container img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.imag-title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #101015;
+    margin: 0;
+    /* background-color: rgba(255, 255, 255, 0.8);  */
+
+    box-sizing: border-box;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+/* section 8 */
+.latest-products-container{
+    height: 160vh;
+}
+.latest-products-bgimg1{
+    background: url('./assets/nissan\ double\ cabin.jpg');
+    /* height: 160vh; */
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-position: center;
+    background-size: cover;
+border-radius: 25px;
+border: 1px solid #bababa;
+padding: 0;
+}
+.latest-products-bgimg2{
+    background: url('./assets/nissan\ double\ cabin.jpg');
 }
 
 
