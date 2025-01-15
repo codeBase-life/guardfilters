@@ -418,7 +418,7 @@ animation: fall 1s ease-in-out 1s forwards;
 
 /* section 8 */
 .custom-card {
-    position: relative;
+    
     
     color: white;
     text-align: center;
@@ -429,17 +429,76 @@ animation: fall 1s ease-in-out 1s forwards;
     overflow: hidden;
 }
 .custom-card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+    /* position: relative; */
+    
     width: 100%;
     height: 100%;
     /* background-color: rgba(0, 0, 0, 0.6); */
+    
+}
+.custom-card-2{
+    display: flex;
+    justify-content: center;
+}
+.overlay-1{
+    margin-top: 5vh;
+}
+.overlay-1 span{
+display: block;
+font-weight: 600;
+font-size: 40px;
+}
+.overlay-1 h3{
+    text-transform: uppercase;
+}
+.custom-card-1{
+    
     
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
+}
+.overlay-2{
+    margin-left: 30vh;
+}
+.overlay-2 span{
+    display: block;
+    color: red;
+    font-size: 40px;
+    font-weight: 600;
+}
+.overlay-2 h3{
+    color: black;
+    text-transform: uppercase;
+}
+.custom-card-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay-3{
+  margin-top: 25vh;
+}
+.overlay-3 h3{
+color: red;
+text-transform: uppercase;
+font-size: 40px;
+font-weight: 600;
+}
+.custom-card-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay-4{
+    margin-top: 25vh;
+}
+.overlay-4 h3{
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
 }
 .custom-card h5 {
     font-size: 1.5rem;
@@ -452,41 +511,59 @@ animation: fall 1s ease-in-out 1s forwards;
 }
 .card-1{
     background: url('./assets/nissan\ double\ cabin.jpg');
-    height: 80vh;
+    height: 60vh;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .card-2{
     background: url('./assets/suzuki-filter-img.png');
-    height: 80vh;
+    height: 60vh;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .card-3{
     background: url('./assets/honda-oil-filter.png');
-    height: 80vh;
+    height: 60vh;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .card-4{
     background: url('./assets/toyota.jpg');
-    height: 80vh;
+    height: 60vh;
     background-size: cover;
     background-repeat: no-repeat;
 }
 @media(max-width:576px){
+    .card-1,.card-4{
+        height: 50vh;
+    }
+    .card-2,.card-3{
+        height: 45vh;
+    }
+    
+    .overlay-1{
+        text-align: center;
+        left: 0;
+        right: 0;
+    }
+    
+}
+@media(min-width:768px){
     .card-1,.card-2,.card-3,.card-4{
         height: 50vh;
     }
-}
-@media(max-width:768px){
-    .card-1,.card-2,.card-3,.card-4{
-        height: 50vh;
+    .overlay-1{
+        text-align: center;
+        
     }
 }
-@media(max-width:992px){
+@media(min-width:1200px){
     .card-1,.card-2,.card-3,.card-4{
-        height: 50vh;
+        height: 100vh;
+    }
+    .overlay-1{
+        text-align: center;
+        
     }
 }
 
