@@ -417,25 +417,78 @@ animation: fall 1s ease-in-out 1s forwards;
 }
 
 /* section 8 */
-.latest-products-container{
-    height: 160vh;
+.custom-card {
+    position: relative;
+    
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
 }
-.latest-products-bgimg1{
-    background: url('./assets/nissan\ double\ cabin.jpg');
-    /* height: 160vh; */
-    border-radius: 10px;
-    background-repeat: no-repeat;
-    background-clip: content-box;
-    background-position: center;
-    background-size: cover;
-border-radius: 25px;
-border: 1px solid #bababa;
-padding: 0;
+.custom-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.latest-products-bgimg2{
-    background: url('./assets/nissan\ double\ cabin.jpg');
+.custom-card h5 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
+.custom-card .btn {
+    margin-top: 10px;
+}
+.card-1{
+    background: url('./assets/nissan\ double\ cabin.jpg');
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card-2{
+    background: url('./assets/suzuki-filter-img.png');
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card-3{
+    background: url('./assets/honda-oil-filter.png');
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card-4{
+    background: url('./assets/toyota.jpg');
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@media(max-width:576px){
+    .card-1,.card-2,.card-3,.card-4{
+        height: 50vh;
+    }
+}
+@media(max-width:768px){
+    .card-1,.card-2,.card-3,.card-4{
+        height: 50vh;
+    }
+}
+@media(max-width:992px){
+    .card-1,.card-2,.card-3,.card-4{
+        height: 50vh;
+    }
+}
 
 /* footer */
 
