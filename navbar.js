@@ -6,58 +6,42 @@ navLinks.forEach((link) => {
   });
 });
 
-$(".carousel").slick({
+var owl = $(".owl-carousel").owlCarousel({
   dots: true,
-  infinite: true,
-  speed: 300,
-  arrows: false,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        centerMode: true,
-        centerPadding: "20px",
+  loop: true,
+  margin: 10,
+  // dotsEach: true,
+  responsiveClass: true,
 
-        infinite: true,
-        dots: true,
-      },
+  responsive: {
+    0: {
+      items: 1,
+      loop: true,
+      dots: true,
     },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        centerPadding: "10px",
-        centerMode: true,
-        slidesToScroll: 1,
-      },
+    400: {
+      items: 2,
+      loop: true,
     },
-    {
-      breakpoint: 480,
-      settings: {
-        centerMode: true,
-        centerPadding: "20px",
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
+    600: {
+      items: 3,
+
+      loop: true,
     },
-  ],
+    1000: {
+      items: 4,
+
+      loop: true,
+    },
+  },
 });
+
 $(".left-arrow").click(function (e) {
   e.preventDefault();
-  $(".carousel").slick("slickPrev");
+  owl.trigger("prev.owl.carousel");
 });
 
 $(".right-arrow").click(function (e) {
   e.preventDefault();
-  $(".carousel").slick("slickNext");
+  owl.trigger("next.owl.carousel");
 });
-
-// fetch("../footer/footer.html")
-//   .then((res) => res.text())
-//   .then((data) => {
-//     document.getElementById("footer").innerHTML = data;
-//   })
