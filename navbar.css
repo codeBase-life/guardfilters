@@ -540,7 +540,13 @@ font-weight: 600;
     .card-2,.card-3{
         height: 45vh;
     }
-    
+    .overlay-2{
+        margin-left: 20vh;
+    }
+
+    .overlay-2 span{
+        font-size: 30px;
+    }
     .overlay-1{
         text-align: center;
         left: 0;
