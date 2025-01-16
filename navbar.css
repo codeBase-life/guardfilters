@@ -573,6 +573,27 @@ font-weight: 600;
     }
 }
 
+/* section 10 */
+.video-container{
+    
+    position: relative;
+}
+.content-on-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.text-on-video{
+    max-width: 110vh;
+}
+/* .text-on-video h3{
+font-size: 13vh;
+}
+.text-on-video p{
+    font-size: 10vh;
+} */
+
 /* footer */
 
 
