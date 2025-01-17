@@ -587,12 +587,47 @@ font-weight: 600;
 .text-on-video{
     max-width: 110vh;
 }
-/* .text-on-video h3{
+.text-on-video h3{
 font-size: 13vh;
 }
 .text-on-video p{
     font-size: 10vh;
-} */
+}
+
+
+/* section11 */
+
+
+.clients img{
+    background-color: #F9F9F9;
+    padding: 0 40px;
+}
+.clients img:hover{
+    background-color: #EFEFEF;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+@media(min-width:768px){
+    .clients img{
+padding: 0 18px;
+    }
+}
+@media(min-width:1200px){
+    .clients img{
+        padding: 0 40px;
+    }
+}
+
+
+/* section13 */
+.section13{
+    margin-top: 20vh;
+}
+.find-dealer{
+padding: 50px 0;
+background-color: #F3F4F4;
+}
 
 /* footer */
 
