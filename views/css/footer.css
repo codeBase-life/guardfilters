@@ -1,0 +1,52 @@
+footer{
+
+    background-color: #101015;
+    font-family: "popins", sans-serif;
+}
+
+
+.footer-h4{
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.footer-box{
+    /* height: 25vh; */
+    padding: 100px 0px;
+    border-bottom: 1px solid #bababa;
+}
+
+ul>li>a{
+    text-decoration: none;
+    color: #bababa
+}
+ul>li>a:hover {
+    text-decoration: underline;
+    color: red;
+}
+.office-aside >*{
+color: #bababa;
+}
+.office-aside p{
+    margin: 0;
+}
+
+.contact-aside >*{
+    color: #bababa;
+    padding: 0;
+    margin: 0;
+}
+
+/* section2 */
+
+.section2{
+    color: #bababa;
+}
+.section2 >*{
+font-weight: 500;
+word-spacing: 2px;
+} 
+
+
+

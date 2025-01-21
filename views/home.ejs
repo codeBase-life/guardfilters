@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <title>Guard filters</title>
+</head>
+
+
+<body>
+    <!-- header -->
+    <header>
+        <section class="section1">
+            <div class="black d-none d-sm-block"></div>
+        </section>
+
+
+        <section class="section2">
+            <div class="container mt-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex flex-column flex-lg-row align-items-center flex-grow-1">
+                        <img src="./assets/logo.jpg" alt="" class="logo-placeholder me-3 mb-3 mb-lg-0">
+                        <div class="input-group flex-grow-1">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" class="form-control border-start-0" placeholder="Search for products">
+                        </div>
+                    </div>
+                    <!-- hamburger menu  -->
+                    <button class="d-block d-xl-none ms-3 hamburger-btn" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <i class="bi bi-list hamburger-menu"></i>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel" style="background-color: #191919;">
+                        <div class="offcanvas-header">
+                            <!-- <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5> -->
+                            <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="text-center">
+                                <a href="">
+
+                                    <i class="bi bi-search text-white"></i>
+                                </a>
+                            </div>
+                            <div class="row">
+                                <div class="hamburger-menu-links ">
+                                    <hr class="my-3 text-white">
+                                    <a href="/" class="text-decoration-none">
+
+                                        <p class="">Home</p>
+                                    </a>
+                                    <hr class="my-3 text-white">
+                                    <a href="/our-company" class="text-decoration-none">
+
+                                        <p class="">Our Company</p>
+                                    </a>
+                                    <hr class="my-3 text-white">
+                                    <a href="" class="text-decoration-none">
+
+                                        <p class="">Find A Product</p>
+                                    </a>
+                                    <hr class="my-3 text-white">
+                                    <a href="" class="text-decoration-none">
+
+                                        <p class="
+                                        ">Filters Family</p>
+                                    </a>
+                                    <hr class="my-3 text-white">
+                                    <a href="/find-dealer" class="text-decoration-none">
+
+                                        <p class="
+                                        ">Find A Dealer</p>
+                                    </a>
+                                    <hr class="my-3 text-white">
+                                    <a href="/certification-awards" class="text-decoration-none">
+
+                                        <p class="
+                                        ">Certification & Awards</p>
+                                    </a>
+                                    <hr class="my-3 text-white">
+                                    <a href="#" class="text-decoration-none">
+
+                                        <p class="
+                                        ">Events</p>
+                                    </a>
+                                    <hr class="my-3 text-white">
+                                    <a href="/csr" class="text-decoration-none">
+
+                                        <p class="
+                                        ">CSR</p>
+                                    </a>
+                                    <hr class="my-3 text-white">
+                                    <a href="/our-catalogue" class="text-decoration-none">
+
+                                        <p class="
+                                        ">Our Catalogue</p>
+                                    </a>
+                                    <hr class="my-3 text-white">
+                                    <a href="/contact-us" class="text-decoration-none">
+
+                                        <p class="
+                                        ">Contact Us</p>
+                                    </a>
+                                    <hr class="my-3 text-white">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="d-none d-xl-block section3">
+            <div class="container-fluid bg-black ">
+                <div class="container  ">
+                    <ul class="nav-ul d-flex flex-wrap">
+                        <li>
+                            <a class="text-white text-decoration-none navlinks" href="/">Home</a>
+                        </li>
+                        <li>
+                            <a class="text-white text-decoration-none navlinks" href="/our-company">Our Company</a>
+                        </li>
+                        <li>
+                            <a class="text-white text-decoration-none navlinks" href="#">Find A Product</a>
+                        </li>
+                        <li>
+                            <a class="text-white text-decoration-none navlinks" href="#">Filters Family</a>
+                        </li>
+                        <li>
+                            <a class="text-white text-decoration-none navlinks" href="/find-dealer">Find A Dealer</a>
+                        </li>
+                        <li>
+                            <a class="text-white text-decoration-none navlinks"
+                                href="/certification-awards">Certification & Awards</a>
+                        </li>
+                        <li>
+                            <a class="text-white text-decoration-none navlinks" href="#">Events</a>
+                        </li>
+                        <li>
+                            <a class="text-white text-decoration-none navlinks" href="/csr">CSR</a>
+                        </li>
+                        <li>
+                            <a class="text-white text-decoration-none navlinks" href="/our-catalogue">Our Catalogue</a>
+                        </li>
+                        <li>
+                            <a class="text-white text-decoration-none navlinks" href="/contact-us">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </header>
+
+    <main>
+        <section class="section4">
+            <div class="container-fluid slider-main">
+                <div class="slider-1">
+                    <h1>box1</h1>
+                </div>
+                <div class="slider-2">
+                    <h1>box2</h1>
+                </div>
+                <div class="slider-3">
+                    <h1>box3</h1>
+                </div>
+
+            </div>
+            <div class="links">
+                <a href="#slider-1" class="link-1">Link 1</a>
+                <a href="#slider-2" class="link-2">Link 2</a>
+                <a href="#slider-3" class="link-3">Link 3</a>
+            </div>
+
+            <div class="container-fluid slider-wrapper position-relative" style="margin: 0; padding: 0;">
+
+                <div class="container-fluid slider1-bg-img slider" id="slider1">
+                    <div class="container ">
+                        <div class="row d-flex justify-content-md-center  flex-row">
+                            <div class="col-12 col-md-6 order-1 order-md-0 text-md-start text-center">
+
+                                <img class="img-fluid slider-1-img1" src="./assets/slider1_home_filter1.png" alt="">
+                            </div>
+                            <div class="col-12 col-md-6 order-0 order-md-1 text-center text-md-start">
+
+                                <img class="img-fluid slider-1-img2" src="./assets/slider1_home_filter1_text.png"
+                                    alt="">
+                                <!-- i used text animate class here because before there was text here and i have applied css on him  -->
+                                <img class="text-animate text-start" src="./assets/slider1_home_filter1_text2.png"
+                                    alt="">
+                                <div class="text-center text-md-start">
+
+                                    <button class="btn-animation text-center">Read More</button>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- slider2  -->
+                <div class="container-fluid slider2_bg_img slider" id="slider2">
+                    <div class="container">
+                        <div class="row d-flex justify-content-md-center align-items-center flex-row pt-5 pt-md-3">
+                            <div class="col-12 col-md-7">
+                                <img class="img-fluid slider2-img1" src="./assets/slider2_home_text1.png" alt="">
+                                <img class="img-fluid slider2-img2" src="./assets/slider2_home_text2.png" alt="">
+                                <div class="text-center text-md-start">
+                                    <button class="text-center btn-animation">read more</button>
+                                </div>
+
+                            </div>
+                            <div class="col-12 col-md-5">
+                                <img class="slider2-img3 img-fluid" src="./assets/slider2_home_filter2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- slider3 -->
+                <div class="container-fluid slider3_bg_img slider" id="slider3">
+                    <div class="container">
+                        <div class="row d-flex justify-content-md-center align-items-center flex-row ">
+                            <div class="col-12 col-md-6 order-1 order-md-0 text-md-start text-center">
+                                <img class="img-fluid" src="./assets/slider3_home_filter3.png" alt="">
+                            </div>
+                            <div class="col-12 col-md-6 order-0 order-md-1 text-center text-md-start">
+                                <img class="img-fluid" src="./assets/slider3_home_text1.png" alt="">
+                                <img class="img-fluid" src="./assets/slider3_home_text2.png" alt="">
+                                <div class="text-center text-md-start">
+
+                                    <button class="btn-animation text-center">Read More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="slide-mover py-3">
+                <a href="#slider1"></a>
+                <a href="#slider2"></a>
+                <a href="#slider3"></a>
+            </div>
+        </section>
+
+        <section class="section5">
+            <div class="container text-center">
+                <h2 style="font-size: 40px; font-weight: 600;">Filters Family</h2>
+            </div>
+
+
+            <div
+                class="container-fluid  filters-family-icons d-flex justify-content-md-between flex-column flex-lg-row px-5 ">
+                <a class="d-inline-block text-center filter-icon text-decoration-none mb-3 mb-lg-0" href="">
+                    <div class="">
+                        <img class="mb-3" src="./assets/oil-filter.png" alt="">
+                        <h6 class="filter-icon-heading">Oil Filter</h6>
+                    </div>
+
+                </a>
+                <a class="d-inline-block text-center filter-icon text-decoration-none mb-3 mb-lg-0" href="">
+                    <div class="">
+                        <img class="mb-3" src="./assets/air-filter.png" alt="">
+                        <h6 class="filter-icon-heading">Air Filter</h6>
+                    </div>
+
+                </a>
+                <a class="d-inline-block text-center filter-icon text-decoration-none mb-3 mb-lg-0" href="">
+                    <div class="">
+                        <img class="mb-3" src="./assets/fuel-filter-icon.png" alt="">
+                        <h6 class="filter-icon-heading">Fuel Filter</h6>
+                    </div>
+
+                </a>
+                <a class="d-inline-block text-center filter-icon text-decoration-none mb-3 mb-lg-0" href="">
+                    <div class="">
+                        <img class="mb-3" src="./assets/Cabin-Filter-icon.png" alt="">
+                        <h6 class="filter-icon-heading">Cabin Filter</h6>
+                    </div>
+
+                </a>
+                <a class="d-inline-block text-center filter-icon text-decoration-none mb-3 mb-lg-0" href="">
+                    <div class="">
+                        <img class="mb-3" src="./assets/view-all.jpg" alt="">
+                        <h6 class="filter-icon-heading view-all">View all</h6>
+                    </div>
+
+                </a>
+
+
+
+            </div>
+        </section>
+
+
+        <section class="section6 my-5">
+
+            <video autoplay muted loop style="width: 100%; object-fit: cover;">
+                <source src="./assets/gg900.mp4">
+            </video>
+
+        </section>
+
+
+        <section class="section7 products1-section mb-5">
+            <div class="container d-flex align-items-center mb-5 pt-5">
+
+
+                <h4 class="filter-by-brands">Filter By Brands</h4>
+
+                <div class="ms-auto">
+
+                    <span>
+                        <a href=""><i class="bi bi-chevron-left left-arrow"></i></a></span>
+                    <span> <a href=""><i class="bi bi-chevron-right right-arrow"></i></a></span>
+                </div>
+            </div>
+
+            <div class="owl-carousel">
+                <div><img src="./product/HONDA CITY 17220-RB6-Z00.jpg" alt=""></div>
+                <div><img src="./product/HONDA CITY 17220-REA-Z002.jpg" alt=""></div>
+                <div> <img src="./product/HONDA CIVIC EXI 17220-P2C- Y011-M3.jpg" alt=""> </div>
+                <div> <img src="./product/HONDA VEZEL 15400-RAF-T01.jpg" alt=""> </div>
+                <div> <img src="./product/suzuki-bolan.jpg" alt=""></div>
+                <div><img src="./product/air-filter.jpg" alt=""></div>
+
+            </div>
+        </section>
+
+
+        <!-- latest products -->
+        <section class="section8 my-5">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-lg-6">
+                        <div class="custom-card card-1">
+                            <div class="custom-card-overlay custom-card-2">
+                                <div class="overlay-1">
+
+                                    <h3> <span>
+                                            Nissan</span>Nissan Double Cabin</h3>
+                                    <button class="btn btn-secondary text-white">View More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-6 col-lg-6">
+                        <div class="custom-card card-2">
+                            <div class="custom-card-overlay custom-card-1">
+                                <div class="overlay-2">
+
+                                    <h3><span>Suzuki</span>
+                                        Alto</h3>
+                                    <button class="btn btn-danger text-white">View More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-7">
+                        <div class="custom-card card-3">
+                            <div class="custom-card-overlay custom-card-3">
+                                <div class="overlay-3">
+
+                                    <h3>Honda</h3>
+                                    <button class="btn btn-danger">View More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-md-6 col-lg-5">
+                        <div class="custom-card card-4">
+                            <div class="custom-card-overlay custom-card-4">
+                                <div class="overlay-4">
+
+                                    <h3>Toyota</h3>
+                                    <button class="btn btn-danger">View More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section9" style="background-color: #FCFCFC;">
+            <div class="container text-center my-5">
+                <h2>Car Filters</h2>
+            </div>
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-md-3 col-sm-6 mb-3 text-center">
+                        <a href="" class="text-decoration-none ">
+                            <img class="img-fluid" src="./product/toyota sygnus 17801-50040.jpg" alt="">
+                            <h4 class="text-black">TOYOTA SYGNUS 17801-50040</h4>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3 text-center">
+                        <a href="" class="text-decoration-none">
+                            <img class="img-fluid" src="./product/honda civic 17220-5aa-a00.jpg" alt="">
+                            <h4 class="text-black">HONDA CIVIC 17220-5AA-A00</h4>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3 text-center">
+                        <a href="" class="text-decoration-none">
+                            <img class="img-fluid" src="./product/nissan days(model 2013).jpg" alt="">
+                            <h4 class="text-black">Nissan Days (Model 2013) || 1500A617</h4>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3 text-center">
+                        <a href="" class="text-decoration-none">
+                            <img class="img-fluid" src="./product/massey ferguson 2654403.jpg" alt="">
+                            <h4 class="text-black">MASSEY FERGUSON 2654403</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-3 col-sm-6 mb-3 text-center">
+                        <a href="" class="text-decoration-none">
+                            <img class="img-fluid" src="./product/isuzu bf-5002.jpg" alt="">
+                            <h4 class="text-black">ISUZU BF-5002 & TXD-5004, TXD-50 1976 ONWARD || 9-88513-264-1</h4>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3 text-center">
+                        <a href="" class="text-decoration-none">
+                            <img class="img-fluid" src="./product/HONDA CITY 17220-REA-Z002.jpg" alt="">
+                            <h4 class="text-black">HONDA CITY 17220-REA-Z002</h4>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3 text-center">
+                        <a href="" class="text-decoration-none">
+                            <img class="img-fluid" src="./product/suzuki-bolan.jpg" alt="">
+                            <h4 class="text-black">SUZUKI BOLAN 13780-79210</h4>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3 text-center">
+                        <a href="" class="text-decoration-none">
+                            <img class="img-fluid" src="./product/master ee 3039-88511194-0.jpg" alt="">
+                            <h4 class="text-black">
+                                MASTER EE 303, 9-88511194-0
+                            </h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container text-center my-5">
+                <button type="button" class="btn btn-danger">Browse more</button>
+            </div>
+        </section>
+
+
+        <section class="section10 mb-5" style="overflow-x: hidden;">
+            <div class="video-container">
+                <video autoplay muted loop
+                    style=" width: 100%; object-fit: contain; margin: 5px 0px; box-sizing: border-box;">
+                    <source src="./assets/gg900.mp4">
+                </video>
+
+                <div class="conatiner content-on-video">
+                    <div class="row d-flex flex-column flex-md-row">
+                        <div class="col-12 col-md-6 order-1 order-md-0 d-flex flex-column align-items-center">
+                            <div class="pt-md-5 text-on-video ">
+
+                                <h3 class="text-white ">Guard Oil Filters</h3>
+                                <p class="text-white">Maximum filtration performance through top quality materials</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6  order-0 order-md-1 d-flex justify-content-md-center">
+                            <img class="pt-md-5" src="./assets/guard_Fillter_oil_footer.jpg" alt="" width="100vh">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+
+        <section class="section11 mb-5">
+            <div class="container text-center mb-5">
+                <h2>Our Clients</h2>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row g-3 clients-row">
+                    <div class="col-6 col-md-2 text-center clients">
+                        <img src="./assets/nissan-logo-86x75.jpg" alt="">
+                    </div>
+                    <div class="col-6 col-md-2 text-center clients">
+                        <img src="./assets/suzuki-logo-86x75.jpg" alt="">
+                    </div>
+                    <div class="col-6 col-md-2 text-center clients">
+                        <img src="./assets/toyota-logo-86x75.jpg" alt="">
+                    </div>
+                    <div class="col-6 col-md-2 text-center clients">
+                        <img src="./assets/Al-Ghazi-logo-86x75.jpg" alt="">
+                    </div>
+                    <div class="col-6 col-md-2 text-center clients">
+                        <img src="./assets/MTL-logo-86x75.jpg" alt="">
+                    </div>
+                    <div class="col-6 col-md-2 text-center clients">
+                        <img src="./assets/honda-logo-86x75.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="section12 ">
+            <div class="container-fluid">
+                <div class="row px-5">
+                    <div class="col-12 col-md-6 text-center text-md-start">
+                        <h4 class="mb-3 ">Our Product</h4>
+                        <p style="color: #696969;font-size: 15px;line-height: 25px;">The name GUARD was selected because
+                            of its literary
+                            meaning which provided the buyers with an
+                            impression that they are actually using Guard Filters to guard their vehicle engines. Mr.
+                            Ifthikar Ali Malik with extensive tours of spare parts markets in the country developed
+                            personal contacts with various departments, appointed sole distributors and travelled even
+                            to remote places to convince the stockist and retailers to give room to the Guard Filters at
+                            their shelves & got it branded as import substitution.</p>
+                    </div>
+                    <div class="col-12 col-md-6 text-center text-md-start mt-md-0 mt-5">
+                        <h4 class="mb-3">About Guard Filter</h4>
+                        <p style="color: #696969; font-size: 15px; line-height: 25px;">The Auto Spare parts business was
+                            started in 1948 by
+                            late Mr.
+                            Muhammad Shafi Malik under the
+                            name of Malik Auto store. A vacuum existed at that time so the business flourished due to
+                            hard work and courteous dealings of the proprietor. Later on, his elder son Mr. Ifthikar Ali
+                            Malik joined him. His shrewdness and business I.Q. helped in exploring more business avenues
+                            .</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section13 ">
+            <div class="container-fluid find-dealer">
+                <div class="conatiner mx-md-5 d-flex flex-column flex-md-row">
+
+                    <div class="d-flex align-items-center flex-column flex-md-row">
+                        <img class="img-fluid" src="./assets/dealer-icon.png" alt="">
+                        <h3 class="my-5 my-md-0 ms-0 ms-md-5">Find A Dealer</h3>
+                    </div>
+                    <div class="ms-0 ms-md-auto d-flex align-items-md-center justify-content-center">
+                        <a href="">
+
+                            <button type="button" class="btn btn-danger">view more</button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <section class="section1">
+            <div class="container-fluid  footer-box">
+                <div class="container">
+                    <div class="row d-flex justify-content-center flex-column flex-md-row">
+
+                        <div class="col-12 col-md-3 text-center text-md-start">
+                            <aside>
+                                <h4 class="footer-h4">Useful links</h4>
+                                <div class="pt-3 pt-md-0">
+                                    <ul class="list-unstyled">
+                                        <li><a href="">Filters</a></li>
+                                        <li><a href="">Find A Dealer</a></li>
+                                        <li><a href="">Terms & Condition</a></li>
+                                        <li><a href="">Who We Are</a></li>
+                                        <li><a href="">Blog</a></li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
+
+                        <div class="col-12 col-md-3 text-center text-md-left mt-5 mt-md-0">
+                            <aside>
+                                <h4 class="footer-h4">Office Time</h4>
+                                <div>
+                                    <aside class="office-aside mt-3 mt-md-0">
+                                        <p>Monday-Saturday</p>
+                                        <strong>8:00 AM - 4:30 PM</strong>
+                                    </aside>
+                                </div>
+                            </aside>
+                        </div>
+
+                        <div class="col-12 col-md-3 text-center text-md-left mt-5 mt-md-0">
+                            <h4 class="footer-h4">Contact Us</h4>
+                            <div>
+                                <aside class="contact-aside mt-3 mt-md-0">
+                                    <p>+92-42-111-007-666</p>
+                                    <p>
+                                        +92-42-5426082
+
+                                    </p>
+                                    <p>
+
+                                        Guard Filter Factory,
+                                    </p>
+                                    <p>Wahdat Road
+                                        Lahore Pakistan</p>
+                                </aside>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-3 text-center text-md-left">
+                            <!-- Add your content here -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section2">
+            <div class="container d-flex justify-md-center mx-md-5 py-5 px-5">
+                <div>
+
+                    <p>
+                        © Copyright 2022 All Right Reserved | Guard Filter Pakistan Design & Developed by Redleos
+                    </p>
+
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <!-- jquery cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="/js/navbar.js"></script>
+
+</body>
+
+</html>

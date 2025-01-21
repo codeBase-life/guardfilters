@@ -1,0 +1,18 @@
+/* section-1 */
+
+.breadcrumb-bg{
+    background-color: #E20A16;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid white;
+}
+.breadcrumb-box h1{
+    font-size: 60px;
+    text-align: center;
+
+}
+.breadcrumb-box{
+    width: 45%;
+}

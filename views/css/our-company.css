@@ -1,0 +1,128 @@
+
+
+.brands-img{
+    border: 2px solid green;
+    padding: 30px 10px;
+    border-radius: 10px;
+    /* width: 100%;
+    height: 100%; */
+}
+
+.all-paras-1,.all-paras-2{
+    color: #626262;
+}
+
+
+.fix-bg-img{
+    background: url('./assets/background-img-1.png');
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+@media(max-width:768px){
+    .fix-bg-img{
+        background-attachment: scroll;
+        height: 30vh !important;
+    }
+    .text-overlay h2{
+        font-size: 15px !important;
+    }
+}
+
+
+@media(max-width:300px){
+    .text-overlay h2{
+        font-size: 13px !important;
+    }
+}
+@media(min-width:992px){
+    .text-overlay h2{
+        height: 60%;
+        font-size: 35px !important;
+    }
+    .fix-bg-img{
+        height: 60vh;
+    }
+}
+.text-overlay{
+    height: 100%;
+}
+.text-overlay h2{
+    width: 50%;
+    margin: 0 auto;
+    font-size: 41px;
+}
+
+
+
+/* section-4 */
+
+.back-lines{
+    background: repeating-linear-gradient(
+        45deg,
+        #d3d3d3,
+        #d3d3d3 2px,
+        #ffffff 2px,
+        #f3f4f4 10px
+    );
+    height: 20vh;
+    margin: 0;
+}
+
+
+.oil-filter-number,.guard-air-number,.guard-fuel-number,.guard-cabin-number{
+font-size: 10vh;
+color: #444444;
+}
+.oil-filter-text,.guard-air-text,.guard-fuel-text,.guard-cabin-text{
+color: #cc232a;
+}
+
+
+
+.filters-banner{
+    background: url('./assets/filters_Banner.jpg');
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* section-5 */
+
+.product-icon {
+    background-color: #F9F9F9;
+    border-radius: 20px;
+    padding: 50px 60px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.product-content {
+    position: relative;
+    z-index: 1;
+}
+
+.product-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    border: 2px solid transparent; 
+    transition: border-color 0.3s; 
+    pointer-events: none; 
+}
+
+.product-icon:hover {
+    background-color: white;
+}
+
+.product-icon:hover::before {
+    border-color: red;
+}

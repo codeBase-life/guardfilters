@@ -1,0 +1,62 @@
+.bg-corporate{
+    background: url('./assets/corporate-responsibility.jpg');
+    height: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+}
+
+.corporate-content{
+    background-color: #E20A16;
+    
+    
+}
+@media(min-width:768px){
+    .corporate-content{
+        width: 50% !important;
+        margin-right: 50% !important;
+        height: 40vh !important;
+        display: flex !important;
+        align-items: center !important;
+
+
+    }
+    .corporate-content h1{
+        /* padding-left: 60vh; */
+        margin: 0 20% !important;
+        text-align: right !important;
+        font-size: 7vh;
+    }
+}
+@media(max-width:768px){
+    .corporate-content{
+        width: 100%;
+        height: 25vh;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    
+   
+}
+@media(min-width:480px){
+    .corporate-content h1{
+        text-align: center;
+        font-size: 5vh;
+    }
+}
+
+
+/* section-4 */
+
+.second-ul li{
+margin: 10px 0 0 0 ;
+color: #5F6271;
+}
+
+/* section-5 */
+
+.mosque-box{
+    padding-top: 100px;
+}

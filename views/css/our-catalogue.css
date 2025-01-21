@@ -1,0 +1,13 @@
+.bg-catalogue{
+    background: url('./assets/catalogue-img.webp');
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.bg-catalogue h3{
+    font-size: 5vh;
+    color: white;
+}

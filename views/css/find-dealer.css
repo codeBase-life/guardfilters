@@ -1,0 +1,20 @@
+.dealer-bg{
+    border-top: 1px solid white;
+    background-color: #E20A16;
+    height: 30vh;
+}
+
+/* section-2 */
+.section-2{
+    background-color: #FCFCFC;
+}
+
+.txt-bold{
+    color: #626262;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.para-color{
+    color: #847676;
+    margin-top: 5px;
+}
