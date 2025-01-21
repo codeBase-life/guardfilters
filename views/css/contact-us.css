@@ -13,6 +13,13 @@
     text-align: center;
 
 }
-.breadcrumb-box{
-    width: 45%;
+.link1{
+         color: #FFC5CBBD;
+         text-decoration: none;
+}
+.link1:hover{
+    text-decoration: underline !important;
+}
+.link2{
+    color: #FFC5CBBD;
 }
