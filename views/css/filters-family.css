@@ -1,0 +1,29 @@
+.filters-family-top-bg{
+    background-color: #E20A16;
+    height:40vh ;
+    
+    border-top: 1px solid white;
+}
+
+@media(max-width:768px){
+    .filters-family-top-bg{
+        height: 30vh;
+    }
+}
+
+filters-family-content h1{
+    text-align: center;
+}
+
+
+.home-link{
+    color:#FFC5CBBD !important;
+    text-decoration: none !important;
+}
+.filters-text{
+    color: #FFC5CBBD;
+    
+}
+.home-link:hover{
+    text-decoration: underline !important;
+}
