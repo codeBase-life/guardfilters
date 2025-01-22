@@ -42,6 +42,12 @@ app.get("/contact-us", (req, res) => {
     content: "contact-us",
   });
 });
+
+app.get("/filters-family", (req, res) => {
+  res.render("index", {
+    content: "filters-family",
+  });
+});
 app.listen(3000, () => {
   console.log("server is running on port 3000");
 });
