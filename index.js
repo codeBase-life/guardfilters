@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const path = require("path");
-const connection = require("./query-data");
+const { connect, sortProduct } = require("./query-data");
 
 app.set("view engine", "ejs");
 
@@ -10,7 +10,8 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "views")));
 
 const port = process.env.PORT || 3000;
-connection();
+
+connect();
 app.get("/", (req, res) => {
   res.render("home");
 });
@@ -47,11 +48,21 @@ app.get("/contact-us", (req, res) => {
   });
 });
 
-app.get("/filters-family", (req, res) => {
-  res.render("index", {
-    content: "filters-family",
-  });
+let sortedProducts = "";
+app.get("/filters-family", async (req, res) => {
+  let sortField = req.query.sortField || "title";
+  let sortOrder = req.query.sortOrder === "desc" ? -1 : 1;
+  try {
+    sortedProducts = await sortProduct(req.query, sortField, sortOrder);
+    res.render("index", {
+      content: "filters-family",
+      productsSorted: sortedProducts,
+    });
+  } catch (error) {
+    res.status(500).send("Error fetching products");
+  }
 });
+
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
 });
