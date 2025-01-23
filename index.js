@@ -48,20 +48,14 @@ app.get("/contact-us", (req, res) => {
   });
 });
 
-let sortedProducts = "";
-app.get("/filters-family", async (req, res) => {
-  let sortField = req.query.sortField || "title";
-  let sortOrder = req.query.sortOrder === "desc" ? -1 : 1;
-  try {
-    sortedProducts = await sortProduct(req.query, sortField, sortOrder);
-    res.render("index", {
-      content: "filters-family",
-      productsSorted: sortedProducts,
-    });
-  } catch (error) {
-    res.status(500).send("Error fetching products");
-  }
-});
+// app.get("/test", async (req, res) => {
+//   try {
+//     const sortedProducts = await sortProduct();
+//     res.send(sortedProducts);
+//   } catch (error) {
+//     res.status(500).send("Error fetching products");
+//   }
+// });
 
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);

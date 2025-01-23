@@ -9,5 +9,7 @@ const productShema = new mongoose.Schema({
   year: Number,
   partno: String,
   oemno: String,
+  imgId: String,
+  imageUrl: String,
 });
 module.exports = mongoose.model("Product", productShema);
