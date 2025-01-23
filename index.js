@@ -48,14 +48,17 @@ app.get("/contact-us", (req, res) => {
   });
 });
 
-// app.get("/test", async (req, res) => {
-//   try {
-//     const sortedProducts = await sortProduct();
-//     res.send(sortedProducts);
-//   } catch (error) {
-//     res.status(500).send("Error fetching products");
-//   }
-// });
+app.get("/filters-family", async (req, res) => {
+  try {
+    const sortedProducts = await sortProduct();
+    res.render("index", {
+      content: "filters-family",
+      productsSorted: sortedProducts,
+    });
+  } catch (error) {
+    res.status(500).send("Error fetching products");
+  }
+});
 
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
