@@ -9,6 +9,8 @@ const products = [
     partno: "gda-2026",
     oemno: "17220-rb6z00",
     imgId: "1",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661563/product_images/r6wixqwlpng0taflthpt.jpg",
   },
   {
     title: "honda city 17220-rea-z002",
@@ -20,6 +22,8 @@ const products = [
     partno: "gda-2012",
     oemno: "17220-rea-z002",
     imgId: "2",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661576/product_images/v3oo33go1gxqdexzyzq4.jpg",
   },
   {
     title: "honda civic exi 17220-p2c-y011-m3",
@@ -31,6 +35,8 @@ const products = [
     partno: "gda-882",
     oemno: "17220-pcz-y011-m3",
     imgId: "3",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661588/product_images/r94tpci5gqkwiuv3j8c9.jpg",
   },
   {
     title: "honda vezel 15400-raf-t01",
@@ -42,6 +48,8 @@ const products = [
     partno: "gdo-329",
     oemno: "15400-raf-t01",
     imgId: "4",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661596/product_images/nuyb2sncvwdtxya6yxx3.jpg",
   },
   {
     title: "honda civic ac filter 80292-swa-003",
@@ -53,6 +61,8 @@ const products = [
     partno: "gda-003 ac",
     oemno: "80292-swa-003",
     imgId: "5",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661597/product_images/z2wxrdg3tfeum1h9usvm.jpg",
   },
   {
     title: "suzuki bolan 13780-79210",
@@ -65,6 +75,8 @@ const products = [
     partno: "nill",
     oemno: "nill",
     imgId: "6",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661598/product_images/ko8ftjlpdjgyplhodyns.jpg",
   },
   {
     title: "suzuki 13780-58jf02",
@@ -76,6 +88,8 @@ const products = [
     partno: "GDA-2035",
     oemno: "13780-58JF02",
     imgId: "7",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661599/product_images/egmmxjqhqzcvve7bpcer.jpg",
   },
   {
     title: "HONDA CIVIC 1.8 15400-RTA-004",
@@ -87,6 +101,8 @@ const products = [
     partno: "GDO-197",
     oemno: "15400-RTA-004",
     imgId: "8",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661600/product_images/iijhkqr0qo5tbpmnfmbu.jpg",
   },
   {
     title: "FORD 592E ENGINE || 894972M1",
@@ -98,6 +114,8 @@ const products = [
     partno: "GDO-501",
     oemno: "894972M1",
     imgId: "9",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661602/product_images/l030tsf0pvr0g76bzzsf.jpg",
   },
   {
     title: "HONDA N1 17720-R9G-003 90113-S84-003",
@@ -109,6 +127,8 @@ const products = [
     partno: "GDA-2051",
     oemno: " 17720-R9G-00390113-S84-003",
     imgId: "10",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661564/product_images/kiij16yedzvffrevccpt.jpg",
   },
   {
     title: " TOYOTA C-II 90915-03003",
@@ -120,6 +140,8 @@ const products = [
     partno: "GDO-153",
     oemno: "90915-03003",
     imgId: "11",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661565/product_images/b3mr4wzmkihslebxjffk.jpg",
   },
   {
     title: "SUZUKI 13780-84250",
@@ -131,6 +153,8 @@ const products = [
     partno: "GDA-2028",
     oemno: "13780-84250",
     imgId: "12",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661567/product_images/n0k0pksexbqonzrbluxc.jpg",
   },
   {
     title: "DAIHATSU CHARADE 84/M 17801-87702",
@@ -142,6 +166,8 @@ const products = [
     partno: "GDA-854",
     oemno: "17801-87702",
     imgId: "13",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661568/product_images/g2eqxdagnw7yfmtqe6tz.jpg",
   },
   {
     title: " TOYOTA HILUX 17801-54030",
@@ -153,6 +179,8 @@ const products = [
     partno: "gda-846",
     oemno: "17801-54030",
     imgId: "14",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661569/product_images/bh2z1g0pttp8rqz35afi.jpg",
   },
   {
     title: "FORD TRACTOR 3000, 3600, 4000, 4600 || E8NN-6714-AA/ 2654403",
@@ -164,6 +192,8 @@ const products = [
     partno: "GDO-506A",
     oemno: " E8NN-6714-AA/ 2654403",
     imgId: "15",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661570/product_images/hkstefd3a2mrkmtswhiz.jpg",
   },
   {
     title: "HONDA CIVIC 17220-PEO-661",
@@ -175,6 +205,8 @@ const products = [
     partno: "GDA-850",
     oemno: "17220-PEO-661",
     imgId: "16",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661571/product_images/gawlcnyonw9c4gartyvh.jpg",
   },
   {
     title: "TOYOTA C-I CARINA 15600-25010",
@@ -187,6 +219,8 @@ const products = [
     partno: "GDO-334",
     oemno: "15600-25010",
     imgId: "17",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661572/product_images/ady6h8jy8dquyloanamj.jpg",
   },
   {
     title: "HONDA CIVIC/ACCORD UPTO 1986 15400-PA6-004",
@@ -198,6 +232,8 @@ const products = [
     partno: "GDO-134",
     oemno: "15400-PA6-004",
     imgId: "18",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661573/product_images/a8298vki0pprexthkfd9.jpg",
   },
   {
     title: "HONDA CD-70 17211-065-700",
@@ -209,6 +245,8 @@ const products = [
     partno: "GDA-915",
     oemno: "17211-065-700",
     imgId: "19",
+    imageUrl:
+      " https://res.cloudinary.com/dhft1iafw/image/upload/v1737661574/product_images/npheemsjtt0shrlqpywy.jpg",
   },
   {
     title: "HONDA CIVIC 17220-PM3-Y01",
@@ -220,6 +258,8 @@ const products = [
     partno: "GDA-878",
     oemno: "17220-PM3-Y01",
     imgId: "20",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661577/product_images/vob9fygt5d4j8uybhtkj.jpg",
   },
   {
     title: "HONDA CIVIC 17220-PLC-Y000-01",
@@ -231,6 +271,8 @@ const products = [
     partno: "GDA-2001",
     oemno: "17220-PLC-Y000-01",
     imgId: "21",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661578/product_images/hifm3qnvfx1andg9ovcv.jpg",
   },
   {
     title: "HONDA CIVIC 17220-5AA-A00",
@@ -242,6 +284,8 @@ const products = [
     partno: "GDA-2055",
     oemno: "17220-5AA-A00",
     imgId: "22",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661579/product_images/sqma4x3m8yvpdytsipu4.jpg",
   },
   {
     title: " PAJERO 2300 MB-220900",
@@ -253,6 +297,8 @@ const products = [
     partno: "null",
     oemno: "null",
     imgId: "23",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661581/product_images/wqedjsrttmmfj3kfdzch.jpg",
   },
   {
     title: " TOYOTA VITZ 87139-52020",
@@ -264,6 +310,8 @@ const products = [
     partno: "GDA-004AC",
     oemno: "87139-52020",
     imgId: "24",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661582/product_images/t0qbt45jtflenyeviohg.jpg",
   },
   {
     title: "HONDA CIVIC 15400-PR3-405/ 679-023-PH9-004",
@@ -275,6 +323,8 @@ const products = [
     partno: "GDO-156",
     oemno: "15400-PR3-405/679-023-PH9-004",
     imgId: "25",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661583/product_images/at2tg4zvnr0o9gvyxrd4.jpg",
   },
   {
     title: "HONDA CIVIC 1.8 15400-RTA-004",
@@ -286,6 +336,8 @@ const products = [
     partno: "GDO-197",
     oemno: "15400-RTA-004",
     imgId: "26",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661584/product_images/hs82i1g4kmzfijrodjpz.jpg",
   },
   {
     title: "HONDA CIVIC 17220-P2M-Y000",
@@ -297,6 +349,8 @@ const products = [
     partno: "GDA-886",
     oemno: "17220-P2M-Y000",
     imgId: "27",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661585/product_images/hr5nyfl7lyeanwniaefw.jpg",
   },
   {
     title: " Honda BRV 17220-55AZ01",
@@ -308,6 +362,8 @@ const products = [
     partno: "GDA-2057",
     oemno: " 17220-55AZ01",
     imgId: "28",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661586/product_images/iklmcojrgwd2e5sbmnxt.jpg",
   },
   {
     title: "HONDA LIFE 17220-RS8-000",
@@ -319,6 +375,8 @@ const products = [
     partno: "GDA-2043",
     oemno: "17220-RS8-000",
     imgId: "29",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661587/product_images/mefkjxihgd6exbvtzlud.jpg",
   },
   {
     title: "HONDA VEZEL 17220-R0-008",
@@ -330,6 +388,8 @@ const products = [
     partno: "GDA-2048",
     oemno: "17220-R0-008",
     imgId: "30",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661589/product_images/yb3ri43wyyhwxezqnobw.jpg",
   },
   {
     title: "HONDA AIR WAVE 17220-PWA-J01",
@@ -341,6 +401,8 @@ const products = [
     partno: "GDA-2036",
     oemno: "17220-PWA-J01",
     imgId: "31",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661590/product_images/aiwoffi18io1cagcf6wy.jpg",
   },
   {
     title: "FIAT 480, 640 TRACTOR || 1909100",
@@ -352,6 +414,8 @@ const products = [
     partno: "GDF-402A",
     oemno: "1909100",
     imgId: "32",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661592/product_images/d6zeorgbnkbox82gr7pk.jpg",
   },
   {
     title: "FIAT TRACTOR 480, 640 || 1909101/ 9-28-010-00",
@@ -363,6 +427,8 @@ const products = [
     partno: "GDO-508",
     oemno: "1909101/ 9-28-010-00",
     imgId: "33",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661593/product_images/axsqakglaim1qbrklg77.jpg",
   },
   {
     title: "HYUNDAI GRACE H100S, SHEHZORE P/UP || 31973-44001",
@@ -374,6 +440,8 @@ const products = [
     partno: "GDF-222",
     oemno: "31973-44001",
     imgId: "34",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661594/product_images/heg3evniza9rfudvhmls.jpg",
   },
   {
     title:
@@ -387,6 +455,9 @@ const products = [
     partno: "GDO-558C",
     oemno: "826F6714AA LF-3343",
     imgId: "35",
+    imageUrl:
+      "https://res.cloudinary.com/dhft1iafw/image/upload/v1737661595/product_images/kvcatngqkfmm2i6mdl5q.jpg",
   },
 ];
+
 module.exports = products;

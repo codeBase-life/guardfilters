@@ -11,7 +11,6 @@ app.use(express.static(path.join(__dirname, "views")));
 
 const port = process.env.PORT || 3000;
 
-connect();
 app.get("/", (req, res) => {
   res.render("home");
 });
@@ -50,12 +49,13 @@ app.get("/contact-us", (req, res) => {
 
 app.get("/filters-family", async (req, res) => {
   try {
-    const sortedProducts = await sortProduct();
+    const sortedProducts = await connect();
     res.render("index", {
       content: "filters-family",
       productsSorted: sortedProducts,
     });
   } catch (error) {
+    console.error(error); // Log the error for debugging
     res.status(500).send("Error fetching products");
   }
 });

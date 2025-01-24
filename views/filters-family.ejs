@@ -29,17 +29,23 @@
 
 
     <section class="section-2">
-        <div class="container">
-            <div class="row">
-                <% productsSorted.forEach(product=> { %>
-                    <div class="col-md-4">
-                        <h3>
+
+
+
+
+
+        <div class="container-fluid">
+            <% productsSorted.forEach(product=> { %>
+                <div class="card" style="width: 18rem;">
+                    <img src="<%= product.imageUrl %>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">
                             <%= product.title %>
-                        </h3>
-                        <img class="img-fluid" src="<%= product.imageUrl %>" alt="">
+                        </h5>
                     </div>
-                    <% } ) %>
-            </div>
+
+                </div>
+                <% }) %>
         </div>
     </section>
 </body>
