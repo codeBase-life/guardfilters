@@ -1,49 +1,28 @@
-const env = require("dotenv");
-env.config();
-const mongoose = require("mongoose");
+const connectDB = require("./dbConnection");
 const products = require("./products/index");
 const Product = require("./db/model");
+const mongoose = require("mongoose");
 
-const uri = process.env.MONGODB;
-
-const connect = async () => {
+const pagination_data = async () => {
   try {
-    await mongoose
-      .connect(uri, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      })
-      .then(() => {
-        console.log("Database connection successful");
-      });
-
-    const results = await Product.find();
-    return results;
+    await connectDB();
+    const total_products = await Product.countDocuments();
+    return total_products;
   } catch (error) {
-    console.error("Database connection error:", error);
+    console.error("Error querying data:", error);
+  } finally {
+    mongoose.connection.close();
   }
-  mongoose.connection.close();
 };
 
-// connect();
-const updateproducts = async () => {
-  for (const products of products) {
-    try {
-      await model.updateOne({ imgId: products.imgId });
-      console.log(`Updated product with imgId: ${products.imgId}`);
-    } catch (error) {
-      console.error("Error updating product with", error);
-    }
+const fetchPaginatedProducts = async (skip, limit) => {
+  try {
+    await connectDB();
+    const products = await Product.find().skip(skip).limit(limit);
+    return products;
+  } catch (error) {
+    console.log("fetching products", error);
   }
-  mongoose.connection.close();
 };
 
-const sortProduct = async () => {
-  await connect();
-  let sortedProducts = await Product.find();
-  return sortedProducts;
-};
-
-// console.log(sortProduct());
-
-module.exports = { connect, sortProduct };
+module.exports = { pagination_data, fetchPaginatedProducts };

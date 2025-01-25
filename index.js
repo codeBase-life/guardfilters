@@ -2,7 +2,9 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const path = require("path");
-const { connect, sortProduct } = require("./query-data");
+const connectDB = require("./dbConnection");
+const { pagination_data, fetchPaginatedProducts } = require("./query-data");
+const { log } = require("console");
 
 app.set("view engine", "ejs");
 
@@ -10,6 +12,9 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "views")));
 
 const port = process.env.PORT || 3000;
+
+// Connect to the database once when the server starts
+// connectDB();
 
 app.get("/", (req, res) => {
   res.render("home");
@@ -48,11 +53,22 @@ app.get("/contact-us", (req, res) => {
 });
 
 app.get("/filters-family", async (req, res) => {
+  const page = parseInt(req.query.page) || 1;
+  const limit = 12;
+  const skip = (page - 1) * limit;
+  const pagination_count = await pagination_data();
+  const paginatedProducts = await fetchPaginatedProducts(skip, limit);
+  const totalPages = Math.ceil(pagination_count / limit);
+  // console.log("paginatedproducts length", paginatedProducts.length);
+  // console.log("total pages", totalPages);
+  // console.log("page", page);
+
   try {
-    const sortedProducts = await connect();
     res.render("index", {
       content: "filters-family",
-      productsSorted: sortedProducts,
+      productsSorted: paginatedProducts,
+      totalPages,
+      currentPage: page,
     });
   } catch (error) {
     console.error(error); // Log the error for debugging

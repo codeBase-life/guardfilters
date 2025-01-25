@@ -6,7 +6,7 @@ cloudinary.config({
   api_key: "356662981948645",
   api_secret: "1tScelQVwNjogVpzU9LnDwRM6lo",
 });
-const imgPath = path.resolve(__dirname, "./toyota sygnus 17801-50040.jpg");
+const imgPath = path.resolve(__dirname, "./9.jpg");
 cloudinary.uploader.upload(imgPath, function (error, result) {
   if (error) {
     console.error("Error uploading image:", error);
