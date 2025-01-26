@@ -25,4 +25,15 @@ const fetchPaginatedProducts = async (skip, limit) => {
   }
 };
 
-module.exports = { pagination_data, fetchPaginatedProducts };
+const getProductByTitle = async (title) => {
+  try {
+    await connectDB();
+    const product = await Product.findOne({ title: title });
+
+    return product;
+  } catch (error) {
+    console.error("Error fetching product by title:", error);
+  }
+};
+
+module.exports = { pagination_data, fetchPaginatedProducts, getProductByTitle };

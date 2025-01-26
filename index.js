@@ -2,8 +2,13 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const path = require("path");
+const router = express.Router();
 const connectDB = require("./dbConnection");
-const { pagination_data, fetchPaginatedProducts } = require("./query-data");
+const {
+  pagination_data,
+  fetchPaginatedProducts,
+  getProductByTitle,
+} = require("./query-data");
 const { log } = require("console");
 
 app.set("view engine", "ejs");
@@ -59,9 +64,6 @@ app.get("/filters-family", async (req, res) => {
   const pagination_count = await pagination_data();
   const paginatedProducts = await fetchPaginatedProducts(skip, limit);
   const totalPages = Math.ceil(pagination_count / limit);
-  // console.log("paginatedproducts length", paginatedProducts.length);
-  // console.log("total pages", totalPages);
-  // console.log("page", page);
 
   try {
     res.render("index", {
@@ -69,11 +71,27 @@ app.get("/filters-family", async (req, res) => {
       productsSorted: paginatedProducts,
       totalPages,
       currentPage: page,
+      totalProducts: pagination_count,
     });
   } catch (error) {
     console.error(error); // Log the error for debugging
     res.status(500).send("Error fetching products");
   }
+});
+
+app.get("/product", async (req, res) => {
+  const title = req.query.title;
+  if (!title) {
+    return res.status(400).send("Title query parameter is required");
+  }
+  const response = await getProductByTitle(title);
+  if (!response) {
+    return res.status(404).send("Product not found");
+  }
+  res.render("product", {
+    product: response || "Product not found",
+  });
+  return; // Ensure the function exits after sending the response
 });
 
 app.listen(port, () => {
