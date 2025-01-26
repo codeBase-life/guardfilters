@@ -29,10 +29,22 @@ const getProductByTitle = async (title) => {
   try {
     await connectDB();
     const product = await Product.findOne({ title: title });
-
-    return product;
+    const related = await relatedProducts(product);
+    return { product, related };
   } catch (error) {
     console.error("Error fetching product by title:", error);
+  }
+};
+
+const relatedProducts = async (product) => {
+  try {
+    const related = await Product.find({
+      filtertype: product.filtertype,
+    }).limit(3);
+
+    return related;
+  } catch (error) {
+    console.log("error to get related products", error);
   }
 };
 

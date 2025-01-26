@@ -85,13 +85,15 @@ app.get("/product", async (req, res) => {
   if (!title) {
     return res.status(400).send("Title query parameter is required");
   }
-  const response = await getProductByTitle(title);
-  if (!response) {
+  const { product, related } = await getProductByTitle(title);
+
+  if (!product) {
     return res.status(404).send("Product not found");
   }
   res.render("index", {
     content: "product",
-    product: response || "Product not found",
+    product: product || "Product not found",
+    relatedProduct: related || "no related products",
   });
   return; // Ensure the function exits after sending the response
 });

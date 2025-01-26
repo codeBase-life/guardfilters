@@ -112,7 +112,7 @@
                     </p>
                 </div>
                 <div style="display: flex; align-items: center;">
-                    <p>Year</p>
+                    <p>Filter Type</p>
                     <hr style="flex-grow: 1; margin: 0 10px; border: none; border-top: 1px solid #626262;">
                     <p style="margin: 0; color: #626262;">
                         <%= product.filtertype || "not available" %>
@@ -121,6 +121,40 @@
                 </div>
 
             </div>
+        </div>
+
+    </section>
+
+    <section class="section-4">
+        <div class="container">
+
+            <hr style="border-top: 1px solid #626262;">
+        </div>
+    </section>
+
+    <section class="section-5 my-5">
+        <div class="container">
+
+            <h3>Related Products</h3>
+            <div class="row">
+                <% relatedProduct.forEach((related, index)=> { %>
+                    <div class="col-6 col-md-4">
+                        <a class="text-decoration-none" href="/product?title=<%= related.title %>">
+                            <img class="img-fluid" src="<%= related.imageUrl %>" alt="<%= related.title %>">
+                            <h4 class="text-center" style="color: #20232C;">
+                                <%= related.title %>
+                            </h4>
+                        </a>
+                    </div>
+
+                    <!-- Clear the row after every 3 items -->
+                    <% if ((index + 1) % 3===0) { %>
+            </div>
+            <div class="row">
+                <% } %>
+                    <% }); %>
+            </div>
+
         </div>
 
     </section>
