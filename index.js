@@ -88,12 +88,12 @@ app.get("/product", async (req, res) => {
   if (!response) {
     return res.status(404).send("Product not found");
   }
-  res.render("product", {
+  res.render("index", {
+    content: "product",
     product: response || "Product not found",
   });
   return; // Ensure the function exits after sending the response
 });
-
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
 });
