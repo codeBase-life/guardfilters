@@ -10,40 +10,65 @@
 
 <body>
     <div class="container">
-        <div class="col-12 col-md-6">
-            <img id="zoom-01" class="img-fluid" src="<%= product.imageUrl %>" alt="">
-        </div>
-        <div class="col-12 col-md-6">
-
-            <h1>
+        <div class="row">
 
 
-                <%= product.title %>
-            </h1>
-            <p>
-                <%= product.description %>
-            </p>
-            <p><b>make:</b>
-                <%= product.make || "not available" %>
-            </p>
-            <p><b>model:</b>
-                <%= product.model || "not available" %>
-            </p>
-            <p><b>filtertype:</b>
-                <%= product.filtertype|| "not available" %>
-            </p>
-            <p><b>year:</b>
-                <%= product.year||"not available" %>
-            </p>
-            <p><b>partno:</b>
-                <%= product.partno|| "not available" %>
-            </p>
-            <p><b>oemno:</b>
-                <%= product.oemno||'not available' %>
-            </p>
+            <div class="col-12 col-md-8">
+                <img id="zoom-01" class="img-fluid" src="<%= product.imageUrl %>" alt="">
+            </div>
+            <div class="col-12 col-md-4">
+
+                <h1>
+
+
+                    <%= product.title %>
+                </h1>
+                <p>
+                    <%= product.description %>
+                </p>
+                <p><b>make:</b>
+                    <%= product.make || "not available" %>
+                </p>
+                <p><b>model:</b>
+                    <%= product.model || "not available" %>
+                </p>
+                <p><b>filtertype:</b>
+                    <%= product.filtertype|| "not available" %>
+                </p>
+                <p><b>year:</b>
+                    <%= product.year||"not available" %>
+                </p>
+                <p><b>partno:</b>
+                    <%= product.partno|| "not available" %>
+                </p>
+                <p><b>oemno:</b>
+                    <%= product.oemno||'not available' %>
+                </p>
+            </div>
         </div>
     </div>
+    <!-- Include jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Include ez-plus -->
+
+    <script src="https://cdn.jsdelivr.net/gh/igorlino/elevatezoom-plus@1.2.3/src/jquery.ez-plus.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#zoom-01").ezPlus({
+                zoomType: "inner",
+                cursor: "crosshair",
+                zoomWindowFadeIn: 500,
+                zoomWindowFadeOut: 750
+            });
+
+        });
+
+
+
+    </script>
+
 </body>
-<script src="/js/product.js"></script>
 
 </html>
