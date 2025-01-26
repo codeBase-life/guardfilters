@@ -1,3 +1,33 @@
-h1{
-    color: yellowgreen;
+
+
+/* section-2 */
+.h1-title{
+    color: #161922;
+    font-size: 30px;
+    font-weight: 600;
+   margin-bottom: 10px;
+}
+
+@media(max-width:768px){
+    .h1-title{
+        font-size: 20px;
+    }
+}
+
+.btn-fb,.btn-twitter,.btn-in,.btn-pin{
+    color: red;
+}
+/* .btn-fb,.btn-twitter,.btn-in,.btn-pin {
+    color: blueviolet;
+} */
+
+
+/* section-3 */
+.product-data{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.product-data p{
+    margin-right: 50px;
 }

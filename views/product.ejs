@@ -8,45 +8,125 @@
     <title>Document</title>
 </head>
 
-<body>
-    <div class="container">
-        <div class="row">
+<body style="background-color: #FCFCFC;">
+    <section class="section-1">
 
-
-            <div class="col-12 col-md-8">
-                <img id="zoom-01" class="img-fluid" src="<%= product.imageUrl %>" alt="">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between ">
+                <div>
+                    <i class="bi bi-chevron-left" style="font-size: 40px; color: #626262;"></i>
+                </div>
+                <div>
+                    <a href="/filters-family" class="text-decoration-none" ">
+    
+                        <i class=" bi bi-grid" style="font-size: 40px; color: #626262;"></i>
+                    </a>
+                </div>
+                <div>
+                    <i class="bi bi-chevron-right" style="font-size: 40px; color: #626262;"></i>
+                </div>
             </div>
-            <div class="col-12 col-md-4">
 
-                <h1>
+        </div>
+    </section>
+
+    <section class="section-2">
+
+        <div class="container my-5">
+            <div class="row g-3">
 
 
-                    <%= product.title %>
-                </h1>
-                <p>
-                    <%= product.description %>
-                </p>
-                <p><b>make:</b>
-                    <%= product.make || "not available" %>
-                </p>
-                <p><b>model:</b>
-                    <%= product.model || "not available" %>
-                </p>
-                <p><b>filtertype:</b>
-                    <%= product.filtertype|| "not available" %>
-                </p>
-                <p><b>year:</b>
-                    <%= product.year||"not available" %>
-                </p>
-                <p><b>partno:</b>
-                    <%= product.partno|| "not available" %>
-                </p>
-                <p><b>oemno:</b>
-                    <%= product.oemno||'not available' %>
-                </p>
+                <div class="col-12 col-md-7">
+                    <div class="image-container">
+                        <img id="zoom-01" class="img-fluid zoom-img" src="<%= product.imageUrl %>" alt="">
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 text-center">
+
+                    <h1 class="h1-title">
+
+
+                        <%= product.title %>
+                    </h1>
+                    <p style="color: #626262;">
+                        <b style="color: #696969;">Description: </b>
+                        <%= product.description %>
+                    </p>
+
+                    <p class="my-2" style="color: #626262;"><b style="color: #696969;">Guard Part No:</b>
+                        <%= product.partno|| "not available" %>
+                    </p>
+                    <p style="color: #626262;"><b style="color: #696969;">OEM NO:</b>
+                        <%= product.oemno||'not available' %>
+                    </p>
+                    <p class="mt-3" style="color: red;">
+                        Category: <span><a href="/filters-family" class="text-decoration-none"
+                                style="color: #626262;">Filters
+                                Family</a></span>
+                    </p>
+                    <br>
+                    <span>
+                        <hr style="color: #626262;">
+                    </span>
+                    <div class="d-flex justify-content-center gap-3">
+                        <p style="display: inline;color: #626262;"> Share</p>
+                        <a href="">
+
+                            <i class="bi bi-facebook btn-fb"></i>
+                        </a>
+                        <a href="">
+
+                            <i class="bi bi-twitter btn-twitter"></i>
+                        </a>
+                        <a href="">
+
+                            <i class="bi bi-linkedin btn-in"></i>
+                        </a>
+                        <a href="">
+
+                            <i class="bi bi-pinterest btn-pin"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+
+    <section class="section-3 my-5">
+        <div class="container">
+            <div class="product-data">
+                <div style="display: flex; align-items: center;">
+                    <p ">Make</p>
+                    <hr style=" flex-grow: 1; margin: 0 10px; border: none; border-top: 1px solid #626262;">
+                    <p style="margin: 0; color: #626262;">
+                        <%= product.make || "not available" %>
+                    </p>
+                </div>
+                <div class="my-3" style="display: flex; align-items: center;">
+                    <p>Model</p>
+                    <hr style="flex-grow: 1; margin: 0 10px; border: none; border-top: 1px solid #626262;">
+                    <p style="margin: 0; color: #626262;">
+                        <%= product.model || "not available" %>
+                    </p>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <p>Year</p>
+                    <hr style="flex-grow: 1; margin: 0 10px; border: none; border-top: 1px solid #626262;">
+                    <p style="margin: 0; color: #626262;">
+                        <%= product.filtertype || "not available" %>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
     <!-- Include jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -55,12 +135,15 @@
 
     <script src="https://cdn.jsdelivr.net/gh/igorlino/elevatezoom-plus@1.2.3/src/jquery.ez-plus.js"></script>
     <script>
+
+
         $(document).ready(function () {
             $("#zoom-01").ezPlus({
                 zoomType: "inner",
                 cursor: "crosshair",
-                zoomWindowFadeIn: 500,
-                zoomWindowFadeOut: 750
+                // scrollZoom: true,
+                // easing: true,
+                borderSize: 0,
             });
 
         });
