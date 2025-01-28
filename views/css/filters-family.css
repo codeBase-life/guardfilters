@@ -27,3 +27,16 @@ filters-family-content h1{
 .home-link:hover{
     text-decoration: underline !important;
 }
+
+.show-item{
+    cursor: pointer;
+}
+.show-item:hover{
+    text-decoration: underline;
+}
+
+@media(max-width:768px){
+    .card-title{
+        font-size: 20px;
+    }
+}

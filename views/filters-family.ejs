@@ -28,38 +28,31 @@
     </section>
 
 
-    <section>
-        <div class="d-flex">
-            <div class="">
-                <p>Showing 1–12 of <%= totalProducts %> results</p>
+    <section class="my-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <p class="d-none d-md-block d-lg-block d-xl-block">Showing 1–12 of <%= totalProducts %> results</p>
             </div>
-            <div class="ms-auto">
-                <nav class="navbar navbar-expand-lg navbar-dark">
-                    <div class="container">
+            <div class="d-flex gap-3">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="text-danger">
+                        Show:</span>
+                    <span class="show-item" <%=currentLimit===6? 'active' :'' %> onclick="updateLimit(6)">6</span>
+                    <span class="show-item" <%=currentLimit===12?'active':'' %>onclick="updateLimit(12)">12</span>
+                    <span class="show-item" <%=currentLimit===24?'active':'' %>onclick="updateLimit(24)">24</span>
+                </div>
+                <div>
+                    <select class="form-select" aria-label="Default select example" onchange="updateSort(this.value)">
+                        <option value="popularity" <%=sortProduct==='popularity' ?'selected': '' %>>Sort by popularity
+                        </option>
+                        <option value="latest" <%=sortProduct==='latest' ?'selected':'' %>>Sort by latest</option>
+                        <option value="high-to-low" <%=sortProduct==='high-to-low' ?'selected':'' %>>Sort by price:high
+                            to low</option>
+                        <option value="low-to-high" <%=sortProduct==='low-to-high' ?'selected':'' %>>Sort by price:low
+                            to high</option>
+                    </select>
+                </div>
 
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                            <ul class="navbar-nav">
-                                <li class="nav-item dropdown">
-                                    <button class="btn btn-white dropdown-toggle" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Dropdown
-                                    </button>
-                                    <ul class="dropdown-menu dropdown-menu-white">
-                                        <li><a class="dropdown-item" href="#">Sort by popularity</a></li>
-                                        <li><a class="dropdown-item" href="#">Sort by latest</a></li>
-                                        <li><a class="dropdown-item" href="#">Sort by price:high to low</a></li>
-                                        <li><a class="dropdown-item" href="#">Sort by price:low to high</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
             </div>
         </div>
     </section>
@@ -71,7 +64,7 @@
 
 
 
-        <div class="container-fluid">
+        <div class="container-fluid d-none d-md-block d-lg-block"> <!-- Group by 3 for large screens -->
             <% for (let i=0; i < productsSorted.length; i +=3) { %>
                 <div class="row">
                     <% for (let j=i; j < i + 3 && j < productsSorted.length; j++) { %>
@@ -79,8 +72,8 @@
                             <a href="/product?title=<%= productsSorted[j].title %>" class="text-decoration-none">
                                 <div class="card" style="display: flex; flex-direction: column; height: 100%;">
                                     <img src="<%= productsSorted[j].imageUrl %>" class="card-img-top" alt="...">
-                                    <div class="card-body" style="flex-grow: 1;">
-                                        <h5 class="card-title">
+                                    <div class="card-body flex-grow-1 d-flex flex-column-reverse">
+                                        <h5 class=" text-center">
                                             <%= productsSorted[j].title %>
                                         </h5>
                                     </div>
@@ -91,13 +84,36 @@
                 </div>
                 <% } %>
         </div>
+
+        <div class="container-fluid d-block  d-md-none d-lg-none d-xl-none"> <!-- Group by 2 for medium screens -->
+            <% for (let i=0; i < productsSorted.length; i +=2) { %> <!-- Group by 2 for small screens -->
+                <div class="row">
+                    <% for (let j=i; j < i + 2 && j < productsSorted.length; j++) { %>
+                        <!-- Adjust inner loop for 2 items per row -->
+                        <div class="col-md-4 col-6 mb-4">
+                            <a href="/product?title=<%= productsSorted[j].title %>" class="text-decoration-none">
+                                <div class="card" style="display: flex; flex-direction: column; height: 100%;">
+                                    <img src="<%= productsSorted[j].imageUrl %>" class="card-img-top" alt="...">
+                                    <div class="card-body flex-grow-1 d-flex flex-column-reverse">
+                                        <h5 class="card-title text-center ">
+                                            <%= productsSorted[j].title %>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <% } %>
+                </div>
+                <% } %>
+        </div>
+
     </section>
 
     <nav class="my-5">
         <ul class="pagination justify-content-center">
             <% for (let i=1; i <=totalPages; i++) { %>
                 <li class="page-item <%= i === currentPage ? 'active' : '' %>">
-                    <a class="page-link" href="/filters-family?page=<%= i %>">
+                    <a class="page-link" href="/filters-family?page=<%= i %>&limit=<%= currentLimit %>">
                         <%= i %>
                     </a>
                 </li>
@@ -105,6 +121,7 @@
         </ul>
     </nav>
 
+    <script src="/js/filters-family.js"></script>
 </body>
 
 </html>

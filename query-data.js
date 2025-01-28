@@ -15,10 +15,13 @@ const pagination_data = async () => {
   }
 };
 
-const fetchPaginatedProducts = async (skip, limit) => {
+const fetchPaginatedProducts = async (skip, limit, sortOptions) => {
   try {
     await connectDB();
-    const products = await Product.find().skip(skip).limit(limit);
+    const products = await Product.find()
+      .sort(sortOptions)
+      .skip(skip)
+      .limit(limit);
     return products;
   } catch (error) {
     console.log("fetching products", error);
@@ -30,6 +33,7 @@ const getProductByTitle = async (title) => {
     await connectDB();
     const product = await Product.findOne({ title: title });
     const related = await relatedProducts(product);
+
     return { product, related };
   } catch (error) {
     console.error("Error fetching product by title:", error);
@@ -48,4 +52,22 @@ const relatedProducts = async (product) => {
   }
 };
 
-module.exports = { pagination_data, fetchPaginatedProducts, getProductByTitle };
+const rightLeftProducts = async () => {
+  console.log("inside right left products");
+
+  try {
+    await connectDB();
+    const sorted = await Product.find();
+
+    return sorted;
+  } catch (error) {
+    console.log("error to get right left products", error);
+  }
+};
+
+module.exports = {
+  pagination_data,
+  fetchPaginatedProducts,
+  getProductByTitle,
+  rightLeftProducts,
+};

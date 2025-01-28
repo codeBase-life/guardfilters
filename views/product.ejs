@@ -8,29 +8,65 @@
     <title>Document</title>
 </head>
 
+
 <body style="background-color: #FCFCFC;">
     <section class="section-1">
+        <div class="container-fluid product-top-bg d-flex align-items-center">
+
+            <div class="container product-content d-flex align-items-center flex-column">
+
+                <h1 class="text-white text-center">Filters Family</h1>
+
+
+                <div class="d-none d-md-none d-lg-block">
+                    <span><a href="/" class="home-link">Home</a></span>
+                    <span><i class="bi bi-chevron-right" style="color: #FFC5CBBD;"></i></span>
+                    <span class="filters-text"><a href="/filters-family"
+                            class="text-decoration-none filters-text home-link">Filters
+                            Family</a></span>
+                    <span><i class="bi bi-chevron-right" style="color: #FFC5CBBD;"></i></span>
+                    <span class="filters-text">
+                        <%= product.title %>
+                    </span>
+                </div>
+
+            </div>
+    </section>
+    <section class="section-2">
 
         <div class="container-fluid">
-            <div class="d-flex justify-content-between ">
-                <div>
-                    <i class="bi bi-chevron-left" style="font-size: 40px; color: #626262;"></i>
-                </div>
-                <div>
-                    <a href="/filters-family" class="text-decoration-none" ">
-    
-                        <i class=" bi bi-grid" style="font-size: 40px; color: #626262;"></i>
-                    </a>
-                </div>
-                <div>
-                    <i class="bi bi-chevron-right" style="font-size: 40px; color: #626262;"></i>
-                </div>
-            </div>
 
+            <% const currentIndex=rightLeftProducts.findIndex(product=> product.title === currentProduct.title);
+                const prevIndex = currentIndex > 0 ? currentIndex - 1 : null;
+                const nextIndex = currentIndex < rightLeftProducts.length - 1 ? currentIndex + 1 : null; %>
+
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <% if (prevIndex !==null) { %>
+                                <a href="/product?title=<%= rightLeftProducts[prevIndex].title %>">
+                                    <i class="bi bi-chevron-left" style="font-size: 40px; color: #626262;"></i>
+                                </a>
+                                <% } %>
+                        </div>
+
+                        <div>
+                            <a href="/filters-family" class="text-decoration-none">
+                                <i class="bi bi-grid" style="font-size: 40px; color: #626262;"></i>
+                            </a>
+                        </div>
+
+                        <div>
+                            <% if (nextIndex !==null) { %>
+                                <a href="/product?title=<%= rightLeftProducts[nextIndex].title %>">
+                                    <i class="bi bi-chevron-right" style="font-size: 40px; color: #626262;"></i>
+                                </a>
+                                <% } %>
+                        </div>
+                    </div>
         </div>
     </section>
 
-    <section class="section-2">
+    <section class="section-3">
 
         <div class="container my-5">
             <div class="row g-3">
@@ -94,7 +130,7 @@
     </section>
 
 
-    <section class="section-3 my-5">
+    <section class="section-4 my-5">
         <div class="container">
             <div class="product-data">
                 <div style="display: flex; align-items: center;">
@@ -125,7 +161,7 @@
 
     </section>
 
-    <section class="section-4">
+    <section class="section-5">
         <div class="container">
 
             <hr style="border-top: 1px solid #626262;">
@@ -140,10 +176,17 @@
                 <% relatedProduct.forEach((related, index)=> { %>
                     <div class="col-6 col-md-4">
                         <a class="text-decoration-none" href="/product?title=<%= related.title %>">
-                            <img class="img-fluid" src="<%= related.imageUrl %>" alt="<%= related.title %>">
-                            <h4 class="text-center" style="color: #20232C;">
-                                <%= related.title %>
-                            </h4>
+                            <div class="d-flex flex-column" style="height: 100%;">
+
+                                <img class="img-fluid" src="<%= related.imageUrl %>" alt="<%= related.title %>">
+                                <div class="flex-grow-1 d-flex flex-column-reverse">
+
+                                    <h4 class="text-center title-container" style="color: #20232C;">
+                                        <%= related.title %>
+                                    </h4>
+                                </div>
+
+                            </div>
                         </a>
                     </div>
 
@@ -154,6 +197,8 @@
                 <% } %>
                     <% }); %>
             </div>
+
+
 
         </div>
 
