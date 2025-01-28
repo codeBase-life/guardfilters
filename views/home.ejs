@@ -174,101 +174,65 @@
 
     <main>
         <section class="section4">
-            <div class="container-fluid slider-main">
-                <div class="slider-1">
-                    <h1>box1</h1>
-                </div>
-                <div class="slider-2">
-                    <h1>box2</h1>
-                </div>
-                <div class="slider-3">
-                    <h1>box3</h1>
-                </div>
-
-            </div>
-            <div class="links">
-                <a href="#slider-1" class="link-1">Link 1</a>
-                <a href="#slider-2" class="link-2">Link 2</a>
-                <a href="#slider-3" class="link-3">Link 3</a>
-            </div>
-
-            <div class="container-fluid slider-wrapper position-relative" style="margin: 0; padding: 0;">
-
-                <div class="container-fluid slider1-bg-img slider" id="slider1">
-                    <div class="container ">
-                        <div class="row d-flex justify-content-md-center  flex-row">
-                            <div class="col-12 col-md-6 order-1 order-md-0 text-md-start text-center">
-
-                                <img class="img-fluid slider-1-img1" src="./assets/slider1_home_filter1.png" alt="">
-                            </div>
-                            <div class="col-12 col-md-6 order-0 order-md-1 text-center text-md-start">
-
-                                <img class="img-fluid slider-1-img2" src="./assets/slider1_home_filter1_text.png"
-                                    alt="">
-                                <!-- i used text animate class here because before there was text here and i have applied css on him  -->
-                                <img class="text-animate text-start" src="./assets/slider1_home_filter1_text2.png"
-                                    alt="">
-                                <div class="text-center text-md-start">
-
-                                    <button class="btn-animation text-center">Read More</button>
+            <div class="container-fluid " style="padding: 0;">
+                <!-- Carousel -->
+                <div id="myCarousel" class="carousel slide carousel-fade">
+                    <!-- Carousel Items -->
+                    <div class="carousel-inner">
+                        <!-- Slide 1 (Unique Background) -->
+                        <div id="slide1" class="carousel-item active">
+                            <div class="container row carousel-item-1 d-flex align-items-end">
+                                <div class="col-md-6 order-1 order-md-0 carousel-item-1-content2">
+                                    <img class="img-fluid slider-1-img1" src="./assets/slider1_home_filter1.png" alt="">
                                 </div>
+                                <div
+                                    class="col-md-6 carousel-item-1-content order-0 order-md-1 text-center text-md-start">
+                                    <div
+                                        class="carousel-1-box d-flex d-md-inline-flex flex-column align-items-center align-items-md-start">
+
+                                        <img class="img-fluid carousel-item-1-img"
+                                            src="./assets/slider1_home_filter1_text.png" alt="">
+                                        <img class="img-fluid carousel-item-1-img2 my-3"
+                                            src="./assets/slider1_home_filter1_text2.png" alt="">
+                                        <div>
+
+                                            <button class="btn btn-danger custom-btn-1">view more</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+
                             </div>
-
-
-
-
-
-
-
                         </div>
-                    </div>
-                </div>
-                <!-- slider2  -->
-                <div class="container-fluid slider2_bg_img slider" id="slider2">
-                    <div class="container">
-                        <div class="row d-flex justify-content-md-center align-items-center flex-row pt-5 pt-md-3">
-                            <div class="col-12 col-md-7">
-                                <img class="img-fluid slider2-img1" src="./assets/slider2_home_text1.png" alt="">
-                                <img class="img-fluid slider2-img2" src="./assets/slider2_home_text2.png" alt="">
-                                <div class="text-center text-md-start">
-                                    <button class="text-center btn-animation">read more</button>
-                                </div>
 
+                        <!-- Slide 2 (Shared Background) -->
+                        <div id="slide2" class="carousel-item">
+                            <div class="carousel-content">
+                                <h3>Slide 2 Content</h3>
+                                <p>This is the second slide with a shared background.</p>
                             </div>
-                            <div class="col-12 col-md-5">
-                                <img class="slider2-img3 img-fluid" src="./assets/slider2_home_filter2.png" alt="">
+                        </div>
+
+                        <!-- Slide 3 (Shared Background) -->
+                        <div id="slide3" class="carousel-item">
+                            <div class="carousel-content">
+                                <h3>Slide 3 Content</h3>
+                                <p>This is the third slide with a shared background.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-
-
-                <!-- slider3 -->
-                <div class="container-fluid slider3_bg_img slider" id="slider3">
-                    <div class="container">
-                        <div class="row d-flex justify-content-md-center align-items-center flex-row ">
-                            <div class="col-12 col-md-6 order-1 order-md-0 text-md-start text-center">
-                                <img class="img-fluid" src="./assets/slider3_home_filter3.png" alt="">
-                            </div>
-                            <div class="col-12 col-md-6 order-0 order-md-1 text-center text-md-start">
-                                <img class="img-fluid" src="./assets/slider3_home_text1.png" alt="">
-                                <img class="img-fluid" src="./assets/slider3_home_text2.png" alt="">
-                                <div class="text-center text-md-start">
-
-                                    <button class="btn-animation text-center">Read More</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Links to Control Carousel -->
+                <div class="mt-3 text-center">
+                    <a href="#myCarousel" role="button" data-bs-slide-to="0" class="btn btn-primary">Slide 1</a>
+                    <a href="#myCarousel" role="button" data-bs-slide-to="1" class="btn btn-primary">Slide 2</a>
+                    <a href="#myCarousel" role="button" data-bs-slide-to="2" class="btn btn-primary">Slide 3</a>
                 </div>
+            </div>
 
-            </div>
-            <div class="slide-mover py-3">
-                <a href="#slider1"></a>
-                <a href="#slider2"></a>
-                <a href="#slider3"></a>
-            </div>
+
+
         </section>
 
         <section class="section5">
