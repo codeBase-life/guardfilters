@@ -173,73 +173,8 @@
     </header>
 
     <main>
-        <section class="section4">
-            <!-- <div class="container-fluid " style="padding: 0;"> -->
+        <section class="section4 mb-5">
 
-            <!-- <div id="myCarousel" class="carousel slide carousel-fade">
-                   
-                    <div class="carousel-inner">
-                      
-                        <div id="slide1" class="carousel-item-first active">
-                            <div class="container row carousel-item-1 d-flex align-items-end">
-                                <div class="col-md-6 order-1 order-md-0 carousel-item-1-content2">
-                                    <img class="img-fluid slider-1-img1" src="./assets/slider1_home_filter1.png" alt="">
-                                </div>
-                                <div
-                                    class="col-md-6 carousel-item-1-content order-0 order-md-1 text-center text-md-start">
-                                    <div
-                                        class="carousel-1-box d-flex d-md-inline-flex flex-column align-items-center align-items-md-start">
-
-                                        <img class="img-fluid carousel-item-1-img"
-                                            src="./assets/slider1_home_filter1_text.png" alt="">
-                                        <img class="img-fluid carousel-item-1-img2 my-3"
-                                            src="./assets/slider1_home_filter1_text2.png" alt="">
-                                        <div>
-
-                                            <button class="btn btn-danger custom-btn-1">view more</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        
-                        <div id="slide2" class="carousel-item">
-                            <div class=" container row carousel-item-2 d-flex align-items-end">
-
-                                <div class="col-md-6 carousel-item-2-content "></div>
-                                <div>
-                                   
-                                </div>
-
-                            </div>
-                        </div>
-
-                       
-                        <div id="slide3" class="carousel-item">
-                            <div class="carousel-content">
-                                <h3>Slide 3 Content</h3>
-                                <p>This is the third slide with a shared background.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                
-                <div class="mt-3 text-center">
-                    <a href="#myCarousel" role="button" data-bs-slide-to="0" class="btn btn-primary">Slide 1</a>
-                    <a href="#myCarousel" role="button" data-bs-slide-to="1" class="btn btn-primary">Slide 2</a>
-                    <a href="#myCarousel" role="button" data-bs-slide-to="2" class="btn btn-primary">Slide 3</a>
-                </div> 
-
-
-
-                
-
-            </div> -->
             <div class="container-fluid" style="padding: 0;">
                 <!-- Carousel -->
                 <div id="myCarousel" class="carousel slide carousel-fade">
@@ -313,18 +248,18 @@
                     </div>
 
                     <!-- Links to Control Carousel -->
-                    <div class="mt-3 text-center">
-                        <a href="#myCarousel" role="button" data-bs-slide-to="0" class="btn btn-primary">Slide 1</a>
-                        <a href="#myCarousel" role="button" data-bs-slide-to="1" class="btn btn-primary">Slide 2</a>
-                        <a href="#myCarousel" role="button" data-bs-slide-to="2" class="btn btn-primary">Slide 3</a>
+                    <div class="mt-3 text-center circle-links">
+                        <a href="#myCarousel" role="button" data-bs-slide-to="0" class="active"></a>
+                        <a href="#myCarousel" role="button" data-bs-slide-to="1"></a>
+                        <a href="#myCarousel" role="button" data-bs-slide-to="2"></a>
                     </div>
                 </div>
-
+            </div>
 
 
         </section>
 
-        <section class="section5">
+        <section class="section5 ">
             <div class="container text-center">
                 <h2 style="font-size: 40px; font-weight: 600;">Filters Family</h2>
             </div>
@@ -399,12 +334,42 @@
             </div>
 
             <div class="owl-carousel">
-                <div><img src="./product/HONDA CITY 17220-RB6-Z00.jpg" alt=""></div>
-                <div><img src="./product/HONDA CITY 17220-REA-Z002.jpg" alt=""></div>
-                <div> <img src="./product/HONDA CIVIC EXI 17220-P2C- Y011-M3.jpg" alt=""> </div>
-                <div> <img src="./product/HONDA VEZEL 15400-RAF-T01.jpg" alt=""> </div>
-                <div> <img src="./product/suzuki-bolan.jpg" alt=""></div>
-                <div><img src="./product/air-filter.jpg" alt=""></div>
+                <div>
+                    <a href="/product?title=honda city 17220-rb6-z00" class="text-decoration-none"><img
+                            src="./product/HONDA CITY 17220-RB6-Z00.jpg" alt="">
+                        <h4 class="bg-white  text-black text-center">HONDA CITY 17220-RB6-Z00</h4>
+                    </a>
+                </div>
+                <div>
+                    <a href="/product?title=honda city 17220-rea-z002" class="text-decoration-none">
+                        <img src="./product/HONDA CITY 17220-REA-Z002.jpg" alt="">
+                        <h4 class="bg-white  text-black text-center">HONDA CITY 17220-REA-Z002</h4>
+                    </a>
+                </div>
+                <div>
+                    <a href="/product?title=honda civic exi 17220-p2c-y011-m3" class="text-decoration-none">
+                        <img src="./product/HONDA CIVIC EXI 17220-P2C- Y011-M3.jpg" alt="">
+                        <h4 class="bg-white  text-black text-center">HONDA CIVIC EXI 17220-P2C- Y011-M3</h4>
+                    </a>
+                </div>
+                <div>
+                    <a href="/product?title=honda vezel 15400-raf-t01" class="text-decoration-none">
+                        <img src="./product/HONDA VEZEL 15400-RAF-T01.jpg" alt="">
+                        <h4 class="bg-white  text-black text-center">HONDA VEZEL 15400-RAF-T01</h4>
+                    </a>
+                </div>
+                <div>
+                    <a href="/product?title=suzuki bolan 13780-79210" class="text-decoration-none">
+                        <img src="./product/suzuki-bolan.jpg" alt="">
+                        <h4 class="bg-white  text-black text-center">SUZUKI BOLAN 13780-79210</h4>
+                    </a>
+                </div>
+                <div>
+                    <a href="/product?title=honda civic ac filter 80292-swa-003" class="text-decoration-none">
+                        <img src="./product/air-filter.jpg" alt="">
+                        <h4 class="bg-white  text-black text-center">Honda Civic AC Filter 80292-SWA-003</h4>
+                    </a>
+                </div>
 
             </div>
         </section>
@@ -475,39 +440,39 @@
             <div class="container">
                 <div class="row g-3">
                     <div class="col-md-3 col-sm-6 mb-3 text-center">
-                        <a href="#" class="text-decoration-none ">
-                            <img class="img-fluid" src="./product/toyota sygnus 17801-50040.jpg" alt="">
-                            <h4 class="text-black">TOYOTA SYGNUS 17801-50040</h4>
+                        <a href="/product?title=suzuki 13780-58jf02" class="text-decoration-none ">
+                            <img class="img-fluid" src="./product/suzuki 13780-58jf02.jpg" alt="">
+                            <h4 class="text-black">suzuki 13780-58jf02</h4>
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-6 mb-3 text-center">
-                        <a href="" class="text-decoration-none">
+                        <a href="/product?title=HONDA CIVIC 17220-5AA-A00" class="text-decoration-none">
                             <img class="img-fluid" src="./product/honda civic 17220-5aa-a00.jpg" alt="">
                             <h4 class="text-black">HONDA CIVIC 17220-5AA-A00</h4>
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-6 mb-3 text-center">
-                        <a href="" class="text-decoration-none">
-                            <img class="img-fluid" src="./product/nissan days(model 2013).jpg" alt="">
-                            <h4 class="text-black">Nissan Days (Model 2013) || 1500A617</h4>
+                        <a href="/product?title=FORD 592E ENGINE || 894972M1" class="text-decoration-none">
+                            <img class="img-fluid" src="./product/FORD 592E ENGINE  894972M1.jpg" alt="">
+                            <h4 class="text-black">FORD 592E ENGINE || 894972M1</h4>
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-6 mb-3 text-center">
-                        <a href="" class="text-decoration-none">
-                            <img class="img-fluid" src="./product/massey ferguson 2654403.jpg" alt="">
-                            <h4 class="text-black">MASSEY FERGUSON 2654403</h4>
+                        <a href="/product?title=HONDA N1 17720-R9G-003 90113-S84-003" class="text-decoration-none">
+                            <img class="img-fluid" src="./product/HONDA N1 17720-R9G-003 90113-S84-003.jpg" alt="">
+                            <h4 class="text-black">HONDA N1 17720-R9G-003 90113-S84-003</h4>
                         </a>
                     </div>
                 </div>
                 <div class="row g-3">
                     <div class="col-md-3 col-sm-6 mb-3 text-center">
-                        <a href="" class="text-decoration-none">
-                            <img class="img-fluid" src="./product/isuzu bf-5002.jpg" alt="">
-                            <h4 class="text-black">ISUZU BF-5002 & TXD-5004, TXD-50 1976 ONWARD || 9-88513-264-1</h4>
+                        <a href="/product?title=TOYOTA C-II 90915-03003" class="text-decoration-none">
+                            <img class="img-fluid" src="./product/TOYOTA C-II 90915-03003.jpg" alt="">
+                            <h4 class="text-black">TOYOTA C-II 90915-03003</h4>
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-6 mb-3 text-center">
-                        <a href="" class="text-decoration-none">
+                        <a href="/product?title=honda city 17220-rea-z002" class="text-decoration-none">
                             <img class="img-fluid" src="./product/HONDA CITY 17220-REA-Z002.jpg" alt="">
                             <h4 class="text-black">HONDA CITY 17220-REA-Z002</h4>
                         </a>
@@ -519,10 +484,10 @@
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-6 mb-3 text-center">
-                        <a href="" class="text-decoration-none">
-                            <img class="img-fluid" src="./product/master ee 3039-88511194-0.jpg" alt="">
+                        <a href="/product?title=SUZUKI 13780-84250" class="text-decoration-none">
+                            <img class="img-fluid" src="./product/SUZUKI 13780-84250.jpg" alt="">
                             <h4 class="text-black">
-                                MASTER EE 303, 9-88511194-0
+                                SUZUKI 13780-84250
                             </h4>
                         </a>
                     </div>
@@ -533,35 +498,37 @@
             </div>
         </section>
 
-
-        <section class="section10 mb-5" style="overflow-x: hidden;">
-            <div class="video-container">
-                <video autoplay muted loop
-                    style=" width: 100%; object-fit: contain; margin: 5px 0px; box-sizing: border-box;">
-                    <source src="./assets/gg900.mp4">
+        <!-- section-10 -->
+        <section class="section10 mb-5">
+            <div class="video-background">
+                <!-- Video Background -->
+                <video autoplay muted loop>
+                    <source src="./assets/gg900.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
                 </video>
 
-                <div class="conatiner content-on-video">
-                    <div class="row d-flex flex-column flex-md-row">
-                        <div class="col-12 col-md-6 order-1 order-md-0 d-flex flex-column align-items-center">
-                            <div class="pt-md-5 text-on-video ">
+                <!-- <div class="content-container"> -->
+                <div class="row container content-container gx-5">
+                    <div class="col-12 col-md-6 order-md-0 order-1 left-container d-flex flex-column ">
+                        <div class="mt-5 mb-auto text-center text-md-start">
+                            <h2>guard oil filters</h2>
+                            <p>Maximum filtration performance through top quality materials </p>
 
-                                <h3 class="text-white ">Guard Oil Filters</h3>
-                                <p class="text-white">Maximum filtration performance through top quality materials</p>
-                            </div>
                         </div>
-                        <div class="col-12 col-md-6  order-0 order-md-1 d-flex justify-content-md-center">
-                            <img class="pt-md-5" src="./assets/guard_Fillter_oil_footer.jpg" alt="" width="100vh">
+                        <div class="left-container-inside d-flex mb-0 mb-md-5 ms-5 ms-md-0 me-5 me-md-0">
+                            <a href="#" class="me-auto">browse products</a>
+                            <span><i class="bi bi-chevron-left left-arrow-1"></i></span>
+                            <span><i class="bi bi-chevron-right right-arrow-1"></i></span>
                         </div>
-
                     </div>
 
+                    <div class="col-12 col-md-6 order-md-1 order-0 right-container d-flex align-self-center">
+                        <img class="img-fluid" src="./assets/guard_Fillter_oil_footer.jpg" alt="">
+                    </div>
                 </div>
 
+                <!-- </div> -->
             </div>
-
-
-
         </section>
 
 
