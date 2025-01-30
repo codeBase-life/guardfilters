@@ -27,6 +27,52 @@
             </div>
     </section>
 
+    <section class="my-5">
+        <div class="container">
+
+            <div class="d-flex gap-4 flex-md-row flex-column">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>All Make</option>
+                    <% make.forEach(element=> { %>
+                        <option value="<%= element %>">
+                            <%= element %>
+                        </option>
+                        <% }); %>
+                </select>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>All Model</option>
+                    <% model.forEach(element=>{%>
+                        <option value="<%= element %>">
+                            <%= element %>
+                        </option>
+                        <% }) %>
+
+                </select>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>All Filter Type</option>
+                    <% filtertype.forEach(element=>{%>
+                        <option value="<%= element %>">
+                            <%= element %>
+                        </option>
+                        <% }) %>
+
+                </select>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>All Year</option>
+                    <%year.forEach(element=>{%>
+                        <option value="<%= element %>">
+                            <%= element %>
+                        </option>
+                        <%}) %>
+
+                </select>
+                <div class="text-center text-md-start">
+
+                    <button class="btn btn-danger ">filter</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="my-3">
         <div class="d-flex justify-content-between align-items-center">

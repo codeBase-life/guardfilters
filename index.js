@@ -9,6 +9,8 @@ const {
   fetchPaginatedProducts,
   getProductByTitle,
   rightLeftProducts,
+  filterItems,
+  searchProducts,
 } = require("./query-data");
 const { log } = require("console");
 
@@ -84,6 +86,12 @@ app.get("/filters-family", async (req, res) => {
     sortOptions
   );
   const totalPages = Math.ceil(pagination_count / limit);
+  const { filtertype, model, year, make } = await filterItems();
+
+  const filterType = filtertype;
+  const Model = model;
+  const Year = year;
+  const Make = make;
 
   try {
     res.render("index", {
@@ -94,6 +102,10 @@ app.get("/filters-family", async (req, res) => {
       totalProducts: pagination_count,
       currentLimit: limit,
       sortProduct: sort || "latest",
+      filtertype: filterType,
+      model: Model,
+      make: Make,
+      year: Year,
     });
   } catch (error) {
     console.error(error); // Log the error for debugging
@@ -119,6 +131,16 @@ app.get("/product", async (req, res) => {
     rightLeftProducts: (await rightLeftProducts()) || "no related products",
   });
   return; // Ensure the function exits after sending the response
+});
+
+app.get("/search", async (req, res) => {
+  const { query } = req.query;
+  if (!query) {
+    return res.json({ products: [] }); // Return empty array if no query is provided
+  }
+
+  const products = await searchProducts(query);
+  res.json(products);
 });
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);

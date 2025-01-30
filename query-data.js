@@ -65,9 +65,36 @@ const rightLeftProducts = async () => {
   }
 };
 
+const filterItems = async () => {
+  try {
+    await connectDB();
+    const filtertype = await Product.distinct("filtertype");
+    const model = await Product.distinct("model");
+    const year = await Product.distinct("year");
+    const make = await Product.distinct("make");
+    return { filtertype, model, year, make };
+  } catch (error) {
+    console.error("error while fetching filteritems", error);
+  }
+};
+
+const searchProducts = async (query) => {
+  try {
+    await connectDB();
+    const searchResults = await Product.find({
+      title: { $regex: query, $options: "i" },
+    });
+    return searchResults;
+  } catch (error) {
+    console.error("Search error:", error);
+  }
+};
+
 module.exports = {
   pagination_data,
   fetchPaginatedProducts,
   getProductByTitle,
   rightLeftProducts,
+  filterItems,
+  searchProducts,
 };
