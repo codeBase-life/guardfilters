@@ -39,9 +39,13 @@
                             <span class="input-group-text bg-white border-end-0">
                                 <i class="bi bi-search"></i>
                             </span>
-                            <input type="text" class="form-control border-start-0" placeholder="Search for products">
+
                             <!-- Dropdown for displaying search results -->
-                            <div id="searchResults" class="dropdown-menu w-100 shadow"></div>
+                            <input id="searchInput" type="text" class="form-control border-start-0"
+                                placeholder="Search for products" onkeyup="searchProducts(this.value)">
+                            <!-- Dropdown for displaying search results -->
+                            <div id="searchResults"
+                                class="dropdown-menu w-100 shadow position-absolute top-100 start-0"></div>
 
                         </div>
                     </div>
