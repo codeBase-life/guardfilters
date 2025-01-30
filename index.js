@@ -11,6 +11,7 @@ const {
   rightLeftProducts,
   filterItems,
   searchProducts,
+  findFilter,
 } = require("./query-data");
 const { log } = require("console");
 
@@ -142,6 +143,17 @@ app.get("/search", async (req, res) => {
   const products = await searchProducts(query);
   res.json(products);
 });
+app.get("/new/filter-family/:filtertype", async (req, res) => {
+  const { filtertype } = req.params;
+  const individualFilter = await findFilter(filtertype);
+  // res.json(individualFilter);
+
+  res.render("index", {
+    content: "singleFilter",
+    filter: individualFilter,
+  });
+});
+
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
 });

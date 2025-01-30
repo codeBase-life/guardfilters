@@ -78,6 +78,15 @@ const searchProducts = async (query) => {
   }
 };
 
+const findFilter = async (filtertype) => {
+  try {
+    const item = Product.find({ filtertype: filtertype });
+    return item;
+  } catch (error) {
+    console.error("error fetching filteritems", error);
+  }
+};
+
 module.exports = {
   pagination_data,
   fetchPaginatedProducts,
@@ -85,4 +94,5 @@ module.exports = {
   rightLeftProducts,
   filterItems,
   searchProducts,
+  findFilter,
 };

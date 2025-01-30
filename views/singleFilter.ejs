@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <section class="section-2">
+
+
+
+
+
+        <div class="container-fluid d-none d-md-block d-lg-block"> <!-- Group by 3 for large screens -->
+            <% for (let i=0; i < filter.length; i +=3) { %>
+                <div class="row">
+                    <% for (let j=i; j < i + 3 && j < filter.length; j++) { %>
+                        <div class="col-md-4 col-6 mb-4">
+                            <a href="/product?title=<%= filter[j].title %>" class="text-decoration-none">
+                                <div class="card" style="display: flex; flex-direction: column; height: 100%;">
+                                    <img src="<%= filter[j].imageUrl %>" class="card-img-top" alt="...">
+                                    <div class="card-body flex-grow-1 d-flex flex-column-reverse">
+                                        <h5 class=" text-center">
+                                            <%= filter[j].title %>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <% } %>
+                </div>
+                <% } %>
+        </div>
+
+        <div class="container-fluid d-block  d-md-none d-lg-none d-xl-none"> <!-- Group by 2 for medium screens -->
+            <% for (let i=0; i < filter.length; i +=2) { %> <!-- Group by 2 for small screens -->
+                <div class="row">
+                    <% for (let j=i; j < i + 2 && j < filter.length; j++) { %>
+                        <!-- Adjust inner loop for 2 items per row -->
+                        <div class="col-md-4 col-6 mb-4">
+                            <a href="/product?title=<%= filter[j].title %>" class="text-decoration-none">
+                                <div class="card" style="display: flex; flex-direction: column; height: 100%;">
+                                    <img src="<%= filter[j].imageUrl %>" class="card-img-top" alt="...">
+                                    <div class="card-body flex-grow-1 d-flex flex-column-reverse">
+                                        <h5 class="card-title text-center ">
+                                            <%= filter[j].title %>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <% } %>
+                </div>
+                <% } %>
+        </div>
+
+    </section>
+</body>
+
+</html>
