@@ -23,7 +23,7 @@ app.use("/node_modules", express.static(path.join(__dirname, "node_modules")));
 const port = process.env.PORT || 3000;
 
 // Connect to the database once when the server starts
-// connectDB();
+connectDB();
 
 app.get("/", (req, res) => {
   res.render("home");
