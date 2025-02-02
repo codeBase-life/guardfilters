@@ -28,7 +28,7 @@ filters-family-content h1{
     text-decoration: underline !important;
 }
 
-@media(max-width:498px){
+@media(max-width:500px){
     .card-title{
         font-size: 15px !important;
         /* height: 50px; */
@@ -39,12 +39,12 @@ filters-family-content h1{
         white-space: nowrap;
     }
 }
-@media(min-width:500px){
+/* @media(min-width:500px){
     .card-title{
         font-size: 18px !important;
         
     }
-}
+} */
 @media(max-width:768px){
     .card-title{
         font-size: 20px;

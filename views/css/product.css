@@ -68,12 +68,26 @@
     margin-right: 50px;
 }
 
-.title-container {
-    height: 50px;
+
+@media(max-width:500px){
+    .title-container{
+        font-size: 15px !important;
+        /* height: 50px; */
     
-    overflow: hidden;
-    text-overflow: ellipsis;
-    
-    white-space: nowrap;
-    
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
+        white-space: nowrap;
+    }
+}
+/* @media(min-width:500px){
+    .card-title{
+        font-size: 18px !important;
+        
+    }
+} */
+@media(max-width:768px){
+    .title-container{
+        font-size: 20px;
+    }
 }
