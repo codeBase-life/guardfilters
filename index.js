@@ -143,6 +143,7 @@ app.get("/search", async (req, res) => {
   const products = await searchProducts(query);
   res.json(products);
 });
+
 app.get("/new/filter-family/:filtertype", async (req, res) => {
   const { filtertype } = req.params;
   const individualFilter = await findFilter(filtertype);

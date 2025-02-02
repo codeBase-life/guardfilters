@@ -34,7 +34,16 @@ filters-family-content h1{
 .show-item:hover{
     text-decoration: underline;
 }
-
+@media(max-width:300px){
+    .card-title{
+        font-size: 15px !important;
+    }
+}
+@media(min-width:500px){
+    .card-title{
+        font-size: 18px !important;
+    }
+}
 @media(max-width:768px){
     .card-title{
         font-size: 20px;
